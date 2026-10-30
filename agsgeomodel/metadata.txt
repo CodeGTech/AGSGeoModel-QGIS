@@ -1,0 +1,32 @@
+[general]
+name=AGSGeoModel
+qgisMinimumVersion=3.40
+qgisMaximumVersion=3.99
+description=Defensible geological interpretation and 3D ground models from AGS4 ground investigation data, with BGS integration, uncertainty classes and HDD / linear infrastructure assessment.
+version=0.1.0
+author=AGSGeoModel contributors
+email=REPLACE-WITH-MAINTAINER-EMAIL@example.org
+
+about=AGSGeoModel turns AGS4 (and legacy AGS3) ground investigation data into stratigraphically consistent geological interpretations, cross sections, fence diagrams and 3D surfaces. Formation assignment is constrained by a stratigraphic knowledge graph keyed to BGS Lexicon codes, so the model cannot connect units in geologically impossible ways. Every output carries an Observed / Interpolated / Inferred / Speculative class and a confidence value. Includes BGS OGC API integration (625k geology, borehole index, AGS index), groundwater surfaces per aquifer, CPT/SPT parameter derivation and an HDD long-section risk (RAG) assessment. Core requires only NumPy; SciPy, pyproj, openpyxl, scikit-learn, LightGBM, XGBoost and GemPy are optional. No ArcGIS or ESRI licence is needed.
+
+tracker=https://github.com/YOUR-ORG/AGSGeoModel-QGIS/issues
+repository=https://github.com/YOUR-ORG/AGSGeoModel-QGIS
+homepage=https://github.com/YOUR-ORG/AGSGeoModel-QGIS
+tags=geology,geotechnical,AGS,AGS4,borehole,BGS,cross section,fence diagram,3D,HDD,hydrogeology,CPT,SPT,ground model,stratigraphy
+category=Plugins
+icon=icons/agsgeomodel.svg
+experimental=True
+deprecated=False
+hasProcessingProvider=yes
+server=False
+
+changelog=
+    0.1.0 - First public release.
+    * AGS4 (4.0.x-4.2) and AGS3 import with format, dictionary and engineering validation; CRS and vertical datum detection with confirmation in the import wizard.
+    * GeoReasoner: order-constrained formation inference over a BGS Lexicon-keyed knowledge base and province columns (London Basin, East Anglia glacial), missing-layer inference, explained findings.
+    * Reviewer workflow: overrides and acceptances stored in the project GeoPackage, applied on every run, acceptances lapse when the proposal changes.
+    * Constrained 2.5D model: kriging with inequality constraints, fault barriers with throw correction, map constraints, isochore stacking, erosional rockhead; Observed / Interpolated / Inferred / Speculative classes; Monte Carlo realisations.
+    * Sections, fence diagrams and HDD long sections (SVG/PDF); HDD ground-risk RAG assessment with Delft frac-out screening; groundwater per aquifer system; CPT/SPT interpretation and engineering ground model.
+    * BGS integration: 625k geology, faults, borehole and AGS indexes, AGS download as confidence-weighted secondary data; offline cache.
+    * Explainable machine learning: trainable formation evidence model, hole correlation (five modes), domain clustering.
+    * Project panel (project, review, issues, runs), map tools, styled layers with forms and 3D renderers, 12 Processing algorithms, HTML report, GIS / table / 3D exports (VTK, OBJ, PLY, glTF, DXF, IFC).

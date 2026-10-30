@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsDialog</class>
+ <widget class="QDialog" name="SettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AGSGeoModel - settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QTabWidget" name="tabs">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="generalTab">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+      <layout class="QFormLayout" name="generalForm">
+       <item row="0" column="0">
+        <widget class="QLabel" name="reviewerLabel">
+         <property name="text">
+          <string>Reviewer name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="reviewerEdit">
+         <property name="toolTip">
+          <string>Recorded with every override and acceptance (audit trail)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLabel" name="generalNote">
+         <property name="text">
+          <string>Project settings (modelling, GeoReasoner, HDD) are saved in the project folder (agsgeomodel_project.json) and recorded with every run. Reviewer and BGS settings are personal (QGIS user profile).</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="modelTab">
+      <attribute name="title">
+       <string>Modelling</string>
+      </attribute>
+      <layout class="QFormLayout" name="modelForm">
+       <item row="0" column="0">
+        <widget class="QLabel" name="methodLabel">
+         <property name="text">
+          <string>Interpolation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="methodCombo"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="variogramLabel">
+         <property name="text">
+          <string>Variogram model</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="variogramCombo"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="neighboursLabel">
+         <property name="text">
+          <string>Kriging neighbours</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="neighboursSpin">
+         <property name="minimum">
+          <number>4</number>
+         </property>
+         <property name="maximum">
+          <number>128</number>
+         </property>
+         <property name="value">
+          <number>16</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="driftLabel">
+         <property name="text">
+          <string>Drift</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="driftCombo"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QCheckBox" name="faultsCheck">
+         <property name="text">
+          <string>Faults are barriers to interpolation (throw corrected)</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QCheckBox" name="mapCheck">
+         <property name="text">
+          <string>Use geological map constraints</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="primaryLabel">
+         <property name="text">
+          <string>Contact uncertainty: AGS (σ, m)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QDoubleSpinBox" name="primarySigmaSpin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>10.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.050000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="secondaryLabel">
+         <property name="text">
+          <string>Contact uncertainty: BGS / legacy (σ, m)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QDoubleSpinBox" name="secondarySigmaSpin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>0.050000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="mapSigmaLabel">
+         <property name="text">
+          <string>Map linework tolerance (m)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QDoubleSpinBox" name="mapToleranceSpin">
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="seedLabel">
+         <property name="text">
+          <string>Random seed</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QSpinBox" name="seedSpin">
+         <property name="maximum">
+          <number>2147483647</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="reasonerTab">
+      <attribute name="title">
+       <string>GeoReasoner</string>
+      </attribute>
+      <layout class="QFormLayout" name="reasonerForm">
+       <item row="0" column="0">
+        <widget class="QLabel" name="reviewLabel">
+         <property name="text">
+          <string>Flag for review below probability</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="reviewSpin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="maximum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.050000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="neighbourSigmaLabel">
+         <property name="text">
+          <string>Neighbour elevation prior (σ, m)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="neighbourSigmaSpin">
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="splitLabel">
+         <property name="text">
+          <string>Unlogged interval slice (m)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="splitSpin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>10.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="learnedLabel">
+         <property name="text">
+          <string>Learned formation model (JSON)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QgsFileWidget" name="learnedFile"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QCheckBox" name="trainCheck">
+         <property name="text">
+          <string>Train a learned model from this project on the next run</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="bgsTab">
+      <attribute name="title">
+       <string>BGS services</string>
+      </attribute>
+      <layout class="QFormLayout" name="bgsForm">
+       <item row="0" column="0">
+        <widget class="QLabel" name="cacheLabel">
+         <property name="text">
+          <string>Cache file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QgsFileWidget" name="cacheFile"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="ttlLabel">
+         <property name="text">
+          <string>Re-use cached responses for (days)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="ttlSpin">
+         <property name="maximum">
+          <number>3650</number>
+         </property>
+         <property name="value">
+          <number>30</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="offlineCheck">
+         <property name="text">
+          <string>Offline mode (cached responses only)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="ogcLabel">
+         <property name="text">
+          <string>OGC API</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="ogcEdit"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="agsLabel">
+         <property name="text">
+          <string>AGS API</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="agsEdit"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="hydroLabel">
+         <property name="text">
+          <string>Hydrogeology WMS (optional)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="hydroEdit">
+         <property name="placeholderText">
+          <string>not configured: enter a WMS URL you are licensed to use</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="hddTab">
+      <attribute name="title">
+       <string>HDD</string>
+      </attribute>
+      <layout class="QFormLayout" name="hddForm">
+       <item row="0" column="0">
+        <widget class="QLabel" name="spacingLabel">
+         <property name="text">
+          <string>Station spacing (m)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="spacingSpin">
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="minCoverLabel">
+         <property name="text">
+          <string>Minimum cover (m)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="minCoverSpin">
+         <property name="maximum">
+          <double>100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="mixedLabel">
+         <property name="text">
+          <string>Mixed-face tolerance (m)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="mixedSpin">
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="lowCoverLabel">
+         <property name="text">
+          <string>Frac-out flag: cover / reamed diameter below</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="lowCoverSpin">
+         <property name="maximum">
+          <double>100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok|QDialogButtonBox::RestoreDefaults</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsFileWidget</class>
+   <extends>QWidget</extends>
+   <header>qgsfilewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>accept()</slot>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>reject()</slot>
+  </connection>
+ </connections>
+</ui>

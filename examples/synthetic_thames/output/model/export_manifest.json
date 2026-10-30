@@ -1,0 +1,30 @@
+{
+  "crs": "EPSG:27700",
+  "local_origin": [
+    544975.0,
+    179975.0,
+    0.0
+  ],
+  "vertical_exaggeration": 1.0,
+  "units": [
+    "TOPSOIL",
+    "MGR",
+    "ALV",
+    "PEAT",
+    "HEAD",
+    "BRK",
+    "RTDU",
+    "LC",
+    "HWH",
+    "LMBE",
+    "TAB",
+    "CK"
+  ],
+  "run_id": "2331c2e2cd77",
+  "input_hash": "b13898a153e18b8915b9e90e3b25db2f6510a2496efa7e6f8edcb597541fcf5c",
+  "files": {
+    "vtk": "examples/synthetic_thames/output/model/model_units.vtk",
+    "gltf": "examples/synthetic_thames/output/model/model_units.glb"
+  },
+  "note": "OBJ/PLY/glTF/IFC coordinates are relative to local_origin"
+}

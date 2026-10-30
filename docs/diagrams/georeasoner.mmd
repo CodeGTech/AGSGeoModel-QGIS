@@ -1,0 +1,13 @@
+flowchart TB
+  I[Logged interval<br/>GEOL_DESC, GEOL_GEOL, GEOL_BGS, GEOL_FORM] --> P[BS 5930 description parser<br/>principal / secondary constituents,<br/>consistency, structure, inclusions,<br/>chalk grade, stated names]
+  P --> EV[Evidence per unit<br/>stated codes and names: +3 to +4 log-units<br/>description signature weights<br/>optional learned model, floored]
+  KB[(Province column<br/>sequences strict / facies<br/>presence, thickness,<br/>superposition graph)] --> HMM
+  EV --> HMM[Order-constrained HMM<br/>states = units in stratigraphic order<br/>transitions only downwards<br/>thickness and elevation priors]
+  NR[No recovery / unlogged<br/>interval split into slices] --> HMM
+  HMM --> FB[Forward-backward posteriors<br/>MEA decoding]
+  FB --> RUNS[Unit runs per hole<br/>p, alternatives, explanation]
+  RUNS --> OBS[Typed contacts<br/>conformable / erosional / absent<br/>GE / LE bounds, isochores]
+  RUNS --> VAL[Validation rules GEO-*<br/>inversions, omissions, dips,<br/>neighbour conflicts]
+  VAL --> REV[Review panel<br/>accept / override with reason]
+  REV -. next run .-> HMM
+  OBS --> NEXT[Second pass:<br/>leave-one-out elevation priors] --> HMM

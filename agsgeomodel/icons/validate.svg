@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>Validate AGS</title>
+  <path d="M6 3 H19 L25 9 V29 H6 Z" fill="#FFFFFF" stroke="#455A64" stroke-width="1.2"/>
+  <path d="M19 3 V9 H25" fill="#ECEFF1" stroke="#455A64" stroke-width="1.2"/>
+  <line x1="9" y1="12" x2="18" y2="12" stroke="#90A4AE" stroke-width="1.5"/>
+  <line x1="9" y1="16" x2="21" y2="16" stroke="#90A4AE" stroke-width="1.5"/>
+  <line x1="9" y1="20" x2="16" y2="20" stroke="#90A4AE" stroke-width="1.5"/>
+  <circle cx="23" cy="23" r="7" fill="#2E7D32"/>
+  <path d="M19.5 23 l2.5 2.5 l5 -5" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

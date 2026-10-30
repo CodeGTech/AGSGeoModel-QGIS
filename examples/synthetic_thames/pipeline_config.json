@@ -1,0 +1,70 @@
+{
+  "ags_paths": [
+    "input/synthetic_thames_hdd.ags"
+  ],
+  "out_dir": "output",
+  "secondary_ags": [],
+  "settings": {
+    "name": "Synthetic Thames-side HDD crossing (NOT REAL DATA)",
+    "crs": "EPSG:27700",
+    "province": "london_basin",
+    "model": {
+      "cell_size_m": 10.0,
+      "buffer_m": 150.0,
+      "monte_carlo_realisations": 40
+    }
+  },
+  "crs_override": null,
+  "dtm_path": "input/dtm_5m.asc",
+  "faults_path": "input/faults.geojson",
+  "map_paths": [],
+  "sections": [
+    {
+      "name": "Section A-A (along HDD-01)",
+      "line": [
+        [
+          545520.0,
+          180110.0
+        ],
+        [
+          545560.0,
+          180610.0
+        ]
+      ]
+    },
+    {
+      "name": "Section B-B (east-west across fault F1)",
+      "line": [
+        [
+          545100.0,
+          180300.0
+        ],
+        [
+          546150.0,
+          180300.0
+        ]
+      ],
+      "vertical_exaggeration": 8.0
+    }
+  ],
+  "hdd": {
+    "alignment_path": "input/hdd_alignment.geojson",
+    "name": "HDD-01",
+    "design_elevation": -14.0,
+    "crossings_path": "input/crossings.geojson"
+  },
+  "learned_model_path": null,
+  "train_learned_model": false,
+  "run_hydro": true,
+  "run_engineering": true,
+  "run_fence": true,
+  "export_formats": [
+    "vtk",
+    "gltf",
+    "dxf",
+    "ifc"
+  ],
+  "report": true,
+  "backup": true,
+  "write_3d_layers": true
+}

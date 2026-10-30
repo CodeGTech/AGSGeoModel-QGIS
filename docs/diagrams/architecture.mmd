@@ -1,0 +1,30 @@
+flowchart TB
+  subgraph QGIS["QGIS 3.40+ shell (thin, Qt5/Qt6 via qgis.PyQt)"]
+    PL[plugin.py<br/>toolbar, menu, map tools]
+    GUI[gui/<br/>dock: project, review, issues, runs<br/>import wizard, BGS dialog, settings<br/>layer styles, forms, 3D renderers]
+    ALG[algorithms/<br/>12 Processing algorithms]
+    BR[gui/qgis_bridge<br/>QgsCoordinateTransform, QgsBlockingNetworkRequest]
+  end
+  subgraph CORE["Headless core (NumPy only; optional SciPy, pyproj, scikit-learn, LightGBM, XGBoost, GemPy)"]
+    WF[workflows.py / pipeline.py<br/>one code path for GUI, Processing and CLI]
+    IMP[importers/<br/>AGS4 / AGS3 reader, validator, CRS,<br/>CSV, Excel, LAS, LandXML, vector]
+    GEO[geology/<br/>knowledge base + province columns,<br/>description parser, classifier,<br/>order-constrained sequence inference,<br/>contacts, validation rules]
+    MOD[modelling/<br/>kriging + inequality constraints,<br/>fault barriers, map constraints,<br/>uncertainty classes, Monte Carlo, GemPy adapter]
+    ENG[processors/ hydrogeology/ hdd/<br/>CPT, SPT, ground model,<br/>heads and confinement, HDD RAG]
+    BGS[bgs/<br/>OGC API, AGS API, Lexicon,<br/>HTTP cache, borehole ranking]
+    AI[ai/ correlation/<br/>explainable formation model,<br/>similarity, clustering, 5 correlation modes]
+    OUT[visualisation/ exports/ reports/<br/>sections, fences, SVG/PDF,<br/>VTK OBJ PLY glTF DXF IFC, GIS, HTML]
+    DB[database/<br/>project.gpkg store, migrations,<br/>GeoTIFF, 2DM, reviewer decisions]
+  end
+  PL --> GUI
+  PL --> ALG
+  GUI --> WF
+  ALG --> WF
+  BR -. installs host transformer and HTTP fetcher .-> CORE
+  WF --> IMP --> GEO --> MOD --> ENG
+  WF --> BGS
+  GEO <--> AI
+  MOD --> OUT
+  ENG --> OUT
+  WF --> DB
+  DB --> GUI

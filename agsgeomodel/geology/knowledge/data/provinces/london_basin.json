@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "id": "london_basin",
+  "name": "London Basin (central and eastern, including the Thames estuary)",
+  "description": "Default column for Palaeogene-over-Chalk ground in the central and eastern London Basin with Quaternary fluvial and estuarine cover. Presence probabilities and thicknesses are regional priors to be replaced by site-specific values from the BGS sheet explanation / memoir and nearby records.",
+  "max_apparent_dip_deg": 3.0,
+  "rockhead_max_apparent_dip_deg": 15.0,
+  "sequences": [
+    {
+      "id": "surface",
+      "kind": "artificial",
+      "order": "facies",
+      "base": "erosional",
+      "units": [
+        {
+          "code": "TOPSOIL",
+          "presence": 0.35,
+          "thickness_mean": 0.3,
+          "thickness_sd": 0.15
+        },
+        {
+          "code": "MGR",
+          "presence": 0.6,
+          "thickness_mean": 1.5,
+          "thickness_sd": 1.2
+        }
+      ],
+      "typical_order": [
+        "TOPSOIL",
+        "MGR"
+      ],
+      "free_pairs": [
+        [
+          "TOPSOIL",
+          "MGR"
+        ]
+      ]
+    },
+    {
+      "id": "superficial",
+      "kind": "superficial",
+      "order": "facies",
+      "base": "erosional",
+      "units": [
+        {
+          "code": "ALV",
+          "presence": 0.4,
+          "thickness_mean": 5.0,
+          "thickness_sd": 3.0
+        },
+        {
+          "code": "PEAT",
+          "presence": 0.2,
+          "thickness_mean": 1.0,
+          "thickness_sd": 0.8
+        },
+        {
+          "code": "HEAD",
+          "presence": 0.15,
+          "thickness_mean": 2.0,
+          "thickness_sd": 1.5
+        },
+        {
+          "code": "BRK",
+          "presence": 0.15,
+          "thickness_mean": 2.0,
+          "thickness_sd": 1.5
+        },
+        {
+          "code": "RTDU",
+          "presence": 0.6,
+          "thickness_mean": 4.0,
+          "thickness_sd": 2.5
+        }
+      ],
+      "typical_order": [
+        "ALV",
+        "PEAT",
+        "HEAD",
+        "BRK",
+        "RTDU"
+      ],
+      "free_pairs": [
+        [
+          "ALV",
+          "PEAT"
+        ],
+        [
+          "ALV",
+          "HEAD"
+        ],
+        [
+          "HEAD",
+          "BRK"
+        ]
+      ]
+    },
+    {
+      "id": "bedrock",
+      "kind": "bedrock",
+      "order": "strict",
+      "base": "model_base",
+      "modelling": "stack",
+      "units": [
+        {
+          "code": "LC",
+          "presence": 0.55,
+          "thickness_mean": 40.0,
+          "thickness_sd": 30.0
+        },
+        {
+          "code": "HWH",
+          "presence": 0.5,
+          "thickness_mean": 3.0,
+          "thickness_sd": 3.0
+        },
+        {
+          "code": "LMBE",
+          "presence": 0.85,
+          "thickness_mean": 12.0,
+          "thickness_sd": 6.0
+        },
+        {
+          "code": "TAB",
+          "presence": 0.9,
+          "thickness_mean": 18.0,
+          "thickness_sd": 8.0
+        },
+        {
+          "code": "CK",
+          "presence": 1.0,
+          "thickness_mean": 200.0,
+          "thickness_sd": 100.0
+        }
+      ],
+      "relations": [
+        {
+          "upper": "LC",
+          "lower": "HWH",
+          "type": "conformable",
+          "note": "discontinuity at base of Walton Member"
+        },
+        {
+          "upper": "HWH",
+          "lower": "LMBE",
+          "type": "unconformable",
+          "note": "eroded unconformity, basal flint lag"
+        },
+        {
+          "upper": "LMBE",
+          "lower": "TAB",
+          "type": "unconformable",
+          "note": "base of Upnor Formation"
+        },
+        {
+          "upper": "TAB",
+          "lower": "CK",
+          "type": "unconformable",
+          "note": "irregular, karstic Chalk surface"
+        }
+      ]
+    }
+  ],
+  "repetition_explanations": {
+    "default": [
+      "logging or classification error",
+      "reworked material (e.g. chalk or clay clasts in Made Ground or Head)",
+      "reverse faulting or folding",
+      "landslip / cambering"
+    ],
+    "glacial": [
+      "glacial raft (e.g. chalk rafts within till)"
+    ]
+  },
+  "aquifer_systems": [
+    {
+      "id": "shallow",
+      "name": "Shallow groundwater (Made Ground, Alluvium, River Terrace Deposits)",
+      "units": [
+        "TOPSOIL",
+        "MGR",
+        "ALV",
+        "PEAT",
+        "HEAD",
+        "BRK",
+        "RTDU"
+      ],
+      "aquifer_units": [
+        "RTDU"
+      ],
+      "confined_by": [
+        "ALV",
+        "PEAT"
+      ]
+    },
+    {
+      "id": "deep",
+      "name": "Lower aquifer system (Harwich Formation, Lambeth Group, Thanet Formation, Chalk)",
+      "units": [
+        "HWH",
+        "LMBE",
+        "TAB",
+        "CK"
+      ],
+      "aquifer_units": [
+        "TAB",
+        "CK",
+        "HWH",
+        "LMBE"
+      ],
+      "confined_by": [
+        "LC"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>BGS geology and boreholes</title>
+  <rect x="2" y="4" width="22" height="22" rx="2" fill="#F1F8E9" stroke="#558B2F" stroke-width="1.2"/>
+  <path d="M2 14 C8 11 12 17 24 12 V26 H2 Z" fill="#D9CC9C"/>
+  <path d="M2 20 C9 18 14 22 24 19 V26 H2 Z" fill="#7F93B5"/>
+  <path d="M9 4 L14 26" stroke="#B71C1C" stroke-width="1.2" stroke-dasharray="2 1.5"/>
+  <path d="M7 10 l2 -3.5 l2 3.5 z" fill="#AD1457"/>
+  <path d="M17 8 l2 -3.5 l2 3.5 z" fill="#AD1457"/>
+  <circle cx="23" cy="22" r="5.5" fill="#FFFFFF" fill-opacity="0.85" stroke="#263238" stroke-width="2"/>
+  <line x1="27" y1="26" x2="30.5" y2="29.5" stroke="#263238" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

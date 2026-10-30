@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "id": "east_anglia_glacial",
+  "name": "London Basin margin with Anglian glacial cover (north Essex / south Suffolk)",
+  "description": "Palaeogene-over-Chalk bedrock beneath Anglian Lowestoft Formation till and glaciofluvial sand and gravel, with Holocene alluvium and terrace deposits in valleys. Till and outwash interfinger, so the glacial package is a facies association (units may repeat) rather than a strict layer cake. Priors are indicative only.",
+  "max_apparent_dip_deg": 3.0,
+  "rockhead_max_apparent_dip_deg": 20.0,
+  "sequences": [
+    {
+      "id": "surface",
+      "kind": "artificial",
+      "order": "facies",
+      "base": "erosional",
+      "units": [
+        {
+          "code": "TOPSOIL",
+          "presence": 0.5,
+          "thickness_mean": 0.3,
+          "thickness_sd": 0.15
+        },
+        {
+          "code": "MGR",
+          "presence": 0.4,
+          "thickness_mean": 1.0,
+          "thickness_sd": 0.8
+        }
+      ],
+      "typical_order": [
+        "TOPSOIL",
+        "MGR"
+      ],
+      "free_pairs": [
+        [
+          "TOPSOIL",
+          "MGR"
+        ]
+      ]
+    },
+    {
+      "id": "postglacial",
+      "kind": "superficial",
+      "order": "facies",
+      "base": "erosional",
+      "units": [
+        {
+          "code": "ALV",
+          "presence": 0.25,
+          "thickness_mean": 2.5,
+          "thickness_sd": 1.5
+        },
+        {
+          "code": "PEAT",
+          "presence": 0.1,
+          "thickness_mean": 0.8,
+          "thickness_sd": 0.5
+        },
+        {
+          "code": "HEAD",
+          "presence": 0.25,
+          "thickness_mean": 1.5,
+          "thickness_sd": 1.0
+        },
+        {
+          "code": "RTDU",
+          "presence": 0.3,
+          "thickness_mean": 3.0,
+          "thickness_sd": 2.0
+        }
+      ],
+      "typical_order": [
+        "ALV",
+        "PEAT",
+        "HEAD",
+        "RTDU"
+      ],
+      "free_pairs": [
+        [
+          "ALV",
+          "PEAT"
+        ],
+        [
+          "ALV",
+          "HEAD"
+        ]
+      ]
+    },
+    {
+      "id": "glacial",
+      "kind": "superficial",
+      "order": "facies",
+      "base": "erosional",
+      "repeatable": true,
+      "units": [
+        {
+          "code": "LOFT",
+          "presence": 0.7,
+          "thickness_mean": 10.0,
+          "thickness_sd": 8.0
+        },
+        {
+          "code": "GSG",
+          "presence": 0.5,
+          "thickness_mean": 4.0,
+          "thickness_sd": 3.0
+        }
+      ],
+      "typical_order": [
+        "LOFT",
+        "GSG"
+      ],
+      "free_pairs": [
+        [
+          "LOFT",
+          "GSG"
+        ]
+      ]
+    },
+    {
+      "id": "bedrock",
+      "kind": "bedrock",
+      "order": "strict",
+      "base": "model_base",
+      "modelling": "stack",
+      "units": [
+        {
+          "code": "LC",
+          "presence": 0.9,
+          "thickness_mean": 40.0,
+          "thickness_sd": 25.0
+        },
+        {
+          "code": "HWH",
+          "presence": 0.6,
+          "thickness_mean": 4.0,
+          "thickness_sd": 3.0
+        },
+        {
+          "code": "LMBE",
+          "presence": 0.8,
+          "thickness_mean": 10.0,
+          "thickness_sd": 5.0
+        },
+        {
+          "code": "TAB",
+          "presence": 0.7,
+          "thickness_mean": 10.0,
+          "thickness_sd": 6.0
+        },
+        {
+          "code": "CK",
+          "presence": 1.0,
+          "thickness_mean": 200.0,
+          "thickness_sd": 100.0
+        }
+      ],
+      "relations": [
+        {
+          "upper": "LC",
+          "lower": "HWH",
+          "type": "conformable"
+        },
+        {
+          "upper": "HWH",
+          "lower": "LMBE",
+          "type": "unconformable"
+        },
+        {
+          "upper": "LMBE",
+          "lower": "TAB",
+          "type": "unconformable"
+        },
+        {
+          "upper": "TAB",
+          "lower": "CK",
+          "type": "unconformable"
+        }
+      ]
+    }
+  ],
+  "repetition_explanations": {
+    "default": [
+      "logging or classification error",
+      "reworked material",
+      "reverse faulting or folding",
+      "landslip / cambering"
+    ],
+    "glacial": [
+      "glacial raft (chalk or Palaeogene rafts are recorded within the Lowestoft Formation)",
+      "glaciotectonic deformation"
+    ]
+  },
+  "aquifer_systems": [
+    {
+      "id": "shallow",
+      "name": "Superficial groundwater (post-glacial and glacial deposits)",
+      "units": [
+        "TOPSOIL",
+        "MGR",
+        "ALV",
+        "PEAT",
+        "HEAD",
+        "RTDU",
+        "LOFT",
+        "GSG"
+      ],
+      "aquifer_units": [
+        "RTDU",
+        "GSG"
+      ],
+      "confined_by": [
+        "ALV",
+        "PEAT",
+        "LOFT"
+      ]
+    },
+    {
+      "id": "deep",
+      "name": "Lower aquifer system (Palaeogene sands and Chalk)",
+      "units": [
+        "HWH",
+        "LMBE",
+        "TAB",
+        "CK"
+      ],
+      "aquifer_units": [
+        "TAB",
+        "CK",
+        "HWH",
+        "LMBE"
+      ],
+      "confined_by": [
+        "LC"
+      ]
+    }
+  ]
+}

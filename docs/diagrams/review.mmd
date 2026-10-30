@@ -1,0 +1,14 @@
+sequenceDiagram
+  participant R as GeoReasoner
+  participant G as project.gpkg
+  participant U as Reviewer (dock)
+  R->>G: lithology rows (unit, p, evidence,<br/>needs_review, review_reason) + unit_runs
+  U->>G: Accept proposal "LMBE" (reason, name, time)<br/>review_decisions
+  U->>G: Override BH10 15.1-27.0 m = HWH<br/>lithology.override_unit + review_decisions
+  Note over G: issue status edits (accepted / dismissed) kept in issues.status
+  R->>G: next run reads overrides and acceptances
+  alt proposal unchanged
+    R->>G: flag cleared, "accepted by <name>"
+  else proposal changed by new data
+    R->>G: flag re-opened, "re-review: interpretation changed"
+  end

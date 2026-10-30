@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      OSGEO_USERNAME: ${{ secrets.OSGEO_USERNAME }}
+      OSGEO_PASSWORD: ${{ secrets.OSGEO_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check the tag matches the plugin version
+        run: |
+          v=$(python -c "import agsgeomodel; print(agsgeomodel.__version__)")
+          test "v$v" = "${GITHUB_REF_NAME}" || { echo "tag ${GITHUB_REF_NAME} != v$v"; exit 1; }
+      - name: Build the plugin zip and the Python package
+        run: |
+          pip install markdown build  # markdown renders the offline help
+          python scripts/package_plugin.py --out dist
+          python -m build --outdir dist
+      - name: GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true
+      - name: Publish to plugins.qgis.org (only when the OSGeo credentials are configured)
+        if: env.OSGEO_USERNAME != ''
+        run: python scripts/package_plugin.py --out dist --upload

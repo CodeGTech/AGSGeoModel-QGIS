@@ -1,0 +1,22 @@
+flowchart LR
+  A[AGS4 / AGS3 files] --> V[Validate<br/>AGS4 rules 1-20<br/>E00-E15]
+  V --> C[CRS + datum<br/>detection]
+  C --> R[GeoReasoner<br/>formations, probabilities,<br/>missing layers, findings]
+  B[(BGS context:<br/>625k geology, faults,<br/>borehole index, AGS API)] -. province, map constraints,<br/>secondary AGS .-> R
+  D[DTM, faults,<br/>geological maps] --> M
+  RD[(Reviewer decisions<br/>overrides / acceptances)] --> R
+  R --> M[Constrained model<br/>cover thickness, rockhead,<br/>reference + isochores,<br/>residual kriging]
+  M --> U[Uncertainty classes<br/>Observed / Interpolated /<br/>Inferred / Speculative]
+  M --> MC[Monte Carlo<br/>realisations]
+  R --> E[CPT / SPT<br/>ground model]
+  M --> H[Hydrogeology<br/>heads, confinement,<br/>flow, seepage]
+  E --> HDD
+  H --> HDD[HDD assessment<br/>RAG per station]
+  M --> S[Sections, fence,<br/>long sections]
+  U --> G[(project.gpkg<br/>+ rasters)]
+  MC --> G
+  E --> G
+  H --> G
+  HDD --> G
+  S --> G
+  G --> X[3D exports, GIS exports,<br/>HTML report]

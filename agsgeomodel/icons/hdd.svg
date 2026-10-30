@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>HDD ground-risk assessment</title>
+  <rect x="1" y="9" width="30" height="7" fill="#E6C27A"/>
+  <rect x="1" y="16" width="30" height="7" fill="#8D6E63"/>
+  <rect x="1" y="23" width="30" height="8" fill="#90A4AE"/>
+  <path d="M2 9 Q9 9 12 9" stroke="#2E7D32" stroke-width="2.4" fill="none"/>
+  <path d="M3 9 C8 22 24 24 29 9" fill="none" stroke="#263238" stroke-width="2.2" stroke-linecap="round"/>
+  <rect x="5" y="25.5" width="7" height="3" fill="#2E7D32"/>
+  <rect x="12" y="25.5" width="8" height="3" fill="#F9A825"/>
+  <rect x="20" y="25.5" width="7" height="3" fill="#C62828"/>
+  <path d="M8 4 l3 5 h-6 z" fill="#1565C0"/>
+  <path d="M24 4 l3 5 h-6 z" fill="#1565C0"/>
+</svg>

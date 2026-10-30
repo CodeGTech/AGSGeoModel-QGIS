@@ -1,0 +1,15 @@
+flowchart TB
+  O[(Observations<br/>equalities, GE / LE bounds,<br/>sigma by source)] --> CV[Cover sequences<br/>thickness fields >= 0]
+  DTM[DTM / ground surface] --> CV
+  CV --> RH[Rockhead = ground - cover<br/>checked against rockhead contacts]
+  O --> REF[Reference bedrock surface<br/>kriging + active-set inequalities<br/>fault barriers with throw correction]
+  MAP[(Map polygons and contacts<br/>scale-dependent tolerance)] --> REF
+  MAP --> CV
+  O --> ISO[Isochores of intermediate units]
+  REF --> ST[Stacking: reference -/+ isochores]
+  ISO --> ST
+  ST --> RES[Residual kriging per surface<br/>honours every contact,<br/>faults as barriers]
+  RES --> CL[Clamp: no crossing surfaces<br/>erosional truncation at rockhead]
+  RH --> CL
+  CL --> UNC[Std, confidence, class<br/>Observed / Interpolated /<br/>Inferred / Speculative]
+  CL --> MC[Conditional Gaussian random fields<br/>unit probabilities]

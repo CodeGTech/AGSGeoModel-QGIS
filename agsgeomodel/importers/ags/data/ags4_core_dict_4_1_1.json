@@ -1,0 +1,5161 @@
+{
+"source": "AGS4 Standard Dictionary v4.1.1 (subset, via python-ags4)",
+"groups": {
+"PROJ": {
+"h": [
+[
+"PROJ_ID",
+"KEY+REQUIRED",
+"ID",
+"",
+"Project identifier"
+],
+[
+"PROJ_NAME",
+"OTHER",
+"X",
+"",
+"Project title"
+],
+[
+"PROJ_LOC",
+"OTHER",
+"X",
+"",
+"Location of site"
+],
+[
+"PROJ_CLNT",
+"OTHER",
+"X",
+"",
+"Client name"
+],
+[
+"PROJ_CONT",
+"OTHER",
+"X",
+"",
+"Contractors name"
+],
+[
+"PROJ_ENG",
+"OTHER",
+"X",
+"",
+"Project Engineer"
+],
+[
+"PROJ_MEMO",
+"OTHER",
+"X",
+"",
+"General project comments"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. project specification, site location drawings)"
+]
+],
+"desc": "Project Information",
+"parent": "-"
+},
+"TRAN": {
+"h": [
+[
+"TRAN_ISNO",
+"KEY+REQUIRED",
+"X",
+"",
+"Issue sequence reference"
+],
+[
+"TRAN_DATE",
+"REQUIRED",
+"DT",
+"yyyy-mm-dd",
+"Date of production of data file"
+],
+[
+"TRAN_PROD",
+"REQUIRED",
+"X",
+"",
+"Data file producer"
+],
+[
+"TRAN_STAT",
+"REQUIRED",
+"X",
+"",
+"Status of data within submission"
+],
+[
+"TRAN_DESC",
+"OTHER",
+"X",
+"",
+"Description of data transferred"
+],
+[
+"TRAN_AGS",
+"REQUIRED",
+"X",
+"",
+"AGS Edition Reference"
+],
+[
+"TRAN_RECV",
+"REQUIRED",
+"X",
+"",
+"Data file recipient"
+],
+[
+"TRAN_DLIM",
+"OTHER",
+"X",
+"",
+"Record Link data type Delimiter"
+],
+[
+"TRAN_RCON",
+"OTHER",
+"X",
+"",
+"Concatenator"
+],
+[
+"TRAN_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. data file QA check records)"
+]
+],
+"desc": "Data File Transmission Information / Data Status",
+"parent": "-"
+},
+"UNIT": {
+"h": [
+[
+"UNIT_UNIT",
+"KEY+REQUIRED",
+"X",
+"",
+"Unit"
+],
+[
+"UNIT_DESC",
+"REQUIRED",
+"X",
+"",
+"Description"
+],
+[
+"UNIT_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference"
+]
+],
+"desc": "Definition of Units",
+"parent": "-"
+},
+"TYPE": {
+"h": [
+[
+"TYPE_TYPE",
+"KEY+REQUIRED",
+"X",
+"",
+"Data type code"
+],
+[
+"TYPE_DESC",
+"REQUIRED",
+"X",
+"",
+"Description"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference"
+]
+],
+"desc": "Definition of Data Types",
+"parent": "-"
+},
+"ABBR": {
+"h": [
+[
+"ABBR_HDNG",
+"KEY+REQUIRED",
+"X",
+"",
+"Field heading in group"
+],
+[
+"ABBR_CODE",
+"KEY+REQUIRED",
+"X",
+"",
+"Abbreviation used"
+],
+[
+"ABBR_DESC",
+"REQUIRED",
+"X",
+"",
+"Description of abbreviation"
+],
+[
+"ABBR_LIST",
+"OTHER",
+"X",
+"",
+"Source of abbreviation"
+],
+[
+"ABBR_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. contract data specification)"
+]
+],
+"desc": "Abbreviation Definitions",
+"parent": "-"
+},
+"DICT": {
+"h": [
+[
+"DICT_TYPE",
+"KEY+REQUIRED",
+"PA",
+"",
+"Flag to indicate definition is a GROUP or HEADING (i.e. can be either of GROUP or HEADING)"
+],
+[
+"DICT_GRP",
+"KEY+REQUIRED",
+"X",
+"",
+"Group name"
+],
+[
+"DICT_HDNG",
+"KEY",
+"X",
+"",
+"Heading name (Note: This data is REQUIRED where DICT_TYPE='HEADING')"
+],
+[
+"DICT_STAT",
+"OTHER",
+"PA",
+"",
+"Heading status KEY, REQUIRED or OTHER  (Note: This data is REQUIRED where DICT_TYPE='HEADING')"
+],
+[
+"DICT_DTYP",
+"OTHER",
+"PT",
+"",
+"Type of data and format  (Note: This data is REQUIRED where DICT_TYPE='HEADING')"
+],
+[
+"DICT_DESC",
+"REQUIRED",
+"X",
+"",
+"Description"
+],
+[
+"DICT_UNIT",
+"OTHER",
+"PU",
+"",
+"Units  (Note: This data is REQUIRED where DICT_TYPE='HEADING')"
+],
+[
+"DICT_EXMP",
+"OTHER",
+"X",
+"",
+"Example"
+],
+[
+"DICT_PGRP",
+"OTHER",
+"X",
+"",
+"Parent group name  (Note: This data is REQUIRED where DICT_TYPE='GROUP')"
+],
+[
+"DICT_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference"
+]
+],
+"desc": "User Defined Groups and Headings",
+"parent": "-"
+},
+"FILE": {
+"h": [
+[
+"FILE_FSET",
+"KEY+REQUIRED",
+"X",
+"",
+"File set reference"
+],
+[
+"FILE_NAME",
+"KEY+REQUIRED",
+"X",
+"",
+"File name"
+],
+[
+"FILE_DESC",
+"OTHER",
+"X",
+"",
+"Description of content"
+],
+[
+"FILE_TYPE",
+"OTHER",
+"PA",
+"",
+"File type"
+],
+[
+"FILE_PROG",
+"OTHER",
+"X",
+"",
+"Parent program and version number"
+],
+[
+"FILE_DOCT",
+"OTHER",
+"PA",
+"",
+"Document type"
+],
+[
+"FILE_DATE",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"File date"
+],
+[
+"FILE_REM",
+"OTHER",
+"X",
+"",
+"Comments on file"
+]
+],
+"desc": "Associated Files",
+"parent": "-"
+},
+"LOCA": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"LOCA_TYPE",
+"OTHER",
+"PA",
+"",
+"Type of activity"
+],
+[
+"LOCA_STAT",
+"OTHER",
+"PA",
+"",
+"Status of information relating to this position"
+],
+[
+"LOCA_NATE",
+"OTHER",
+"2DP",
+"m",
+"National Grid Easting of location or start of traverse"
+],
+[
+"LOCA_NATN",
+"OTHER",
+"2DP",
+"m",
+"National Grid Northing of location or start of traverse"
+],
+[
+"LOCA_GREF",
+"OTHER",
+"PA",
+"",
+"National grid referencing system used"
+],
+[
+"LOCA_GL",
+"OTHER",
+"2DP",
+"m",
+"Ground level relative to datum of location or start of traverse"
+],
+[
+"LOCA_REM",
+"OTHER",
+"X",
+"",
+"General remarks"
+],
+[
+"LOCA_FDEP",
+"OTHER",
+"2DP",
+"m",
+"Final depth"
+],
+[
+"LOCA_STAR",
+"OTHER",
+"DT",
+"yyyy-mm-dd",
+"Date of start of activity"
+],
+[
+"LOCA_PURP",
+"OTHER",
+"X",
+"",
+"Purpose of activity at this location"
+],
+[
+"LOCA_TERM",
+"OTHER",
+"X",
+"",
+"Reason for activity termination"
+],
+[
+"LOCA_ENDD",
+"OTHER",
+"DT",
+"yyyy-mm-dd",
+"End date of activity"
+],
+[
+"LOCA_LETT",
+"OTHER",
+"X",
+"",
+"OSGB letter grid reference"
+],
+[
+"LOCA_LOCX",
+"OTHER",
+"2DP",
+"m",
+"Local grid x co-ordinate or start of traverse"
+],
+[
+"LOCA_LOCY",
+"OTHER",
+"2DP",
+"m",
+"Local grid y co-ordinate or start of traverse"
+],
+[
+"LOCA_LOCZ",
+"OTHER",
+"2DP",
+"m",
+"Level or start of traverse to local datum"
+],
+[
+"LOCA_LREF",
+"OTHER",
+"X",
+"",
+"Local grid referencing system used"
+],
+[
+"LOCA_DATM",
+"OTHER",
+"X",
+"",
+"Local datum referencing system used"
+],
+[
+"LOCA_ETRV",
+"OTHER",
+"2DP",
+"m",
+"National Grid Easting of end of traverse"
+],
+[
+"LOCA_NTRV",
+"OTHER",
+"2DP",
+"m",
+"National Grid Northing of end of traverse"
+],
+[
+"LOCA_LTRV",
+"OTHER",
+"2DP",
+"m",
+"Ground level relative to datum of end of traverse"
+],
+[
+"LOCA_XTRL",
+"OTHER",
+"2DP",
+"m",
+"Local grid easting of end of traverse"
+],
+[
+"LOCA_YTRL",
+"OTHER",
+"2DP",
+"m",
+"Local grid northing of end of traverse"
+],
+[
+"LOCA_ZTRL",
+"OTHER",
+"2DP",
+"m",
+"Local elevation of end of traverse"
+],
+[
+"LOCA_LAT",
+"OTHER",
+"DMS",
+"",
+"Latitude of location or start of traverse"
+],
+[
+"LOCA_LON",
+"OTHER",
+"DMS",
+"",
+"Longitude of location or start of traverse"
+],
+[
+"LOCA_ELAT",
+"OTHER",
+"DMS",
+"",
+"Latitude of end of traverse"
+],
+[
+"LOCA_ELON",
+"OTHER",
+"DMS",
+"",
+"Longitude of end of traverse"
+],
+[
+"LOCA_LLZ",
+"OTHER",
+"X",
+"",
+"Projection Format"
+],
+[
+"LOCA_LOCM",
+"OTHER",
+"X",
+"",
+"Method of location"
+],
+[
+"LOCA_LOCA",
+"OTHER",
+"X",
+"",
+"Site location sub division (within project) code or description"
+],
+[
+"LOCA_CLST",
+"OTHER",
+"X",
+"",
+"Investigation phase grouping code or description"
+],
+[
+"LOCA_ALID",
+"OTHER",
+"X",
+"",
+"Alignment Identifier"
+],
+[
+"LOCA_OFFS",
+"OTHER",
+"2DP",
+"",
+"Offset"
+],
+[
+"LOCA_CNGE",
+"OTHER",
+"X",
+"",
+"Chainage"
+],
+[
+"LOCA_TRAN",
+"OTHER",
+"X",
+"",
+"Reference to or details of algorithm used to calculate local grid reference, local ground levels or chainage"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. boring or pitting instructions, location photographs)"
+],
+[
+"LOCA_NATD",
+"OTHER",
+"X",
+"",
+"National Datum Referencing System used"
+],
+[
+"LOCA_ORID",
+"OTHER",
+"X",
+"",
+"Original Hole ID"
+],
+[
+"LOCA_ORJO",
+"OTHER",
+"X",
+"",
+"Original Job Reference"
+],
+[
+"LOCA_ORCO",
+"OTHER",
+"X",
+"",
+"Originating Company"
+]
+],
+"desc": "Location Details",
+"parent": "PROJ"
+},
+"GEOL": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"GEOL_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to the top of stratum"
+],
+[
+"GEOL_BASE",
+"KEY",
+"2DP",
+"m",
+"Depth to the base of description"
+],
+[
+"GEOL_DESC",
+"OTHER",
+"X",
+"",
+"General description of stratum"
+],
+[
+"GEOL_LEG",
+"OTHER",
+"PA",
+"",
+"Legend code"
+],
+[
+"GEOL_GEOL",
+"OTHER",
+"PA",
+"",
+"Geology code"
+],
+[
+"GEOL_GEO2",
+"OTHER",
+"PA",
+"",
+"Second geology code"
+],
+[
+"GEOL_STAT",
+"OTHER",
+"X",
+"",
+"Stratum reference shown on trial pit or traverse sketch"
+],
+[
+"GEOL_BGS",
+"OTHER",
+"PA",
+"",
+"BGS Lexicon code"
+],
+[
+"GEOL_FORM",
+"OTHER",
+"X",
+"",
+"Geological formation or stratum name"
+],
+[
+"GEOL_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. logging field sheets, photographs of exposures)"
+]
+],
+"desc": "Field Geological Descriptions",
+"parent": "LOCA"
+},
+"HDPH": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"HDPH_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of section"
+],
+[
+"HDPH_BASE",
+"KEY",
+"2DP",
+"m",
+"Depth to base of section"
+],
+[
+"HDPH_TYPE",
+"KEY",
+"PA",
+"",
+"Type of depth related information"
+],
+[
+"HDPH_STAR",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"Date and time of start of section"
+],
+[
+"HDPH_ENDD",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"Date and time of end of section"
+],
+[
+"HDPH_CREW",
+"OTHER",
+"X",
+"",
+"Name of rig/drill crew/operator"
+],
+[
+"HDPH_EXC",
+"OTHER",
+"X",
+"",
+"Plant used"
+],
+[
+"HDPH_SHOR",
+"OTHER",
+"X",
+"",
+"Shoring/support used"
+],
+[
+"HDPH_STAB",
+"OTHER",
+"X",
+"",
+"Stability of trial pit / trial trench or logged traverse length"
+],
+[
+"HDPH_DIML",
+"OTHER",
+"2DP",
+"m",
+"Trial pit / trial trench or logged traverse length"
+],
+[
+"HDPH_DIMW",
+"OTHER",
+"2DP",
+"m",
+"Trial pit / trial trench or logged traverse width"
+],
+[
+"HDPH_DBIT",
+"OTHER",
+"X",
+"",
+"Drill bit used"
+],
+[
+"HDPH_BCON",
+"OTHER",
+"X",
+"",
+"Bit condition"
+],
+[
+"HDPH_BTYP",
+"OTHER",
+"X",
+"",
+"Barrel type"
+],
+[
+"HDPH_BLEN",
+"OTHER",
+"2DP",
+"m",
+"Barrel length"
+],
+[
+"HDPH_LOG",
+"OTHER",
+"X",
+"",
+"Definitive person responsible for logging the section"
+],
+[
+"HDPH_LOGD",
+"OTHER",
+"DT",
+"yyyy-mm-dd",
+"Start date of hole section logging"
+],
+[
+"HDPH_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"HDPH_ENV",
+"OTHER",
+"X",
+"",
+"Details of weather and environmental conditions during hole section construction"
+],
+[
+"HDPH_METH",
+"OTHER",
+"X",
+"",
+"Details of method of hole section construction"
+],
+[
+"HDPH_CONT",
+"OTHER",
+"X",
+"",
+"Drilling contractor"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. drilling journals, hole orientation data)"
+]
+],
+"desc": "Depth Related Exploratory Hole Information",
+"parent": "LOCA"
+},
+"ISPT": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"ISPT_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test"
+],
+[
+"ISPT_SEAT",
+"OTHER",
+"0DP",
+"",
+"Number of blows for seating drive"
+],
+[
+"ISPT_MAIN",
+"OTHER",
+"0DP",
+"",
+"Number of blows for main test drive"
+],
+[
+"ISPT_NPEN",
+"OTHER",
+"0DP",
+"mm",
+"Total penetration for seating drive and test drive"
+],
+[
+"ISPT_NVAL",
+"OTHER",
+"0DP",
+"",
+"SPT 'N' value"
+],
+[
+"ISPT_REP",
+"OTHER",
+"X",
+"",
+"SPT reported result"
+],
+[
+"ISPT_CAS",
+"OTHER",
+"2DP",
+"m",
+"Casing depth at time of test"
+],
+[
+"ISPT_WAT",
+"OTHER",
+"XN",
+"m",
+"Depth to water at time of test"
+],
+[
+"ISPT_TYPE",
+"OTHER",
+"PA",
+"",
+"Type of SPT test"
+],
+[
+"ISPT_HAM",
+"OTHER",
+"X",
+"",
+"Hammer serial number from manufacturer"
+],
+[
+"ISPT_ERAT",
+"OTHER",
+"0DP",
+"%",
+"Energy ratio of the hammer"
+],
+[
+"ISPT_SWP",
+"OTHER",
+"0DP",
+"mm",
+"Self-weight penetration"
+],
+[
+"ISPT_INC1",
+"OTHER",
+"0DP",
+"",
+"Number of blows for 1st Increment (Seating)"
+],
+[
+"ISPT_INC2",
+"OTHER",
+"0DP",
+"",
+"Number of blows for 2nd Increment (Seating)"
+],
+[
+"ISPT_INC3",
+"OTHER",
+"0DP",
+"",
+"Number of blows for 1st Increment (Test)"
+],
+[
+"ISPT_INC4",
+"OTHER",
+"0DP",
+"",
+"Number of blows for 2nd Increment (Test)"
+],
+[
+"ISPT_INC5",
+"OTHER",
+"0DP",
+"",
+"Number of blows for 3rd Increment (Test)"
+],
+[
+"ISPT_INC6",
+"OTHER",
+"0DP",
+"",
+"Number of blows for 4th Increment (Test)"
+],
+[
+"ISPT_PEN1",
+"OTHER",
+"0DP",
+"mm",
+"Penetration for 1st Increment (Seating Drive)"
+],
+[
+"ISPT_PEN2",
+"OTHER",
+"0DP",
+"mm",
+"Penetration for 2nd Increment (Seating Drive)"
+],
+[
+"ISPT_PEN3",
+"OTHER",
+"0DP",
+"mm",
+"Penetration for 1st Increment (Test)"
+],
+[
+"ISPT_PEN4",
+"OTHER",
+"0DP",
+"mm",
+"Penetration for 2nd Increment (Test)"
+],
+[
+"ISPT_PEN5",
+"OTHER",
+"0DP",
+"mm",
+"Penetration for 3rd Increment (Test)"
+],
+[
+"ISPT_PEN6",
+"OTHER",
+"0DP",
+"mm",
+"Penetration for 4th Increment (Test)"
+],
+[
+"ISPT_ROCK",
+"OTHER",
+"YN",
+"",
+"SPT carried out in soft rock"
+],
+[
+"ISPT_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"ISPT_ENV",
+"OTHER",
+"X",
+"",
+"Details of weather and environmental conditions during test"
+],
+[
+"ISPT_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"ISPT_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+],
+[
+"ISPT_N60",
+"OTHER",
+"0DP",
+"",
+"SPT 'N' value (corrected by energy ratio ISPT_ERAT)"
+]
+],
+"desc": "Standard Penetration Test Results",
+"parent": "LOCA"
+},
+"SCPG": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SCPG_TESN",
+"KEY",
+"X",
+"",
+"Test reference or push number"
+],
+[
+"SCPG_TYPE",
+"OTHER",
+"PA",
+"",
+"Cone test type"
+],
+[
+"SCPG_REF",
+"OTHER",
+"X",
+"",
+"Cone reference"
+],
+[
+"SCPG_CSA",
+"OTHER",
+"0DP",
+"cm2",
+"Surface area of cone tip"
+],
+[
+"SCPG_RATE",
+"OTHER",
+"0DP",
+"mm/s",
+"Nominal rate of penetration of the cone"
+],
+[
+"SCPG_FILT",
+"OTHER",
+"X",
+"",
+"Type of filter material used"
+],
+[
+"SCPG_FRIC",
+"OTHER",
+"YN",
+"",
+"Friction reducer used"
+],
+[
+"SCPG_WAT",
+"OTHER",
+"2DP",
+"m",
+"Groundwater level at time of test"
+],
+[
+"SCPG_WATA",
+"OTHER",
+"X",
+"",
+"Origin of water level in SCPG_WAT"
+],
+[
+"SCPG_REM",
+"OTHER",
+"X",
+"",
+"Comments on testing and basis of any interpreted parameters included in SCPT and SCPP"
+],
+[
+"SCPG_ENV",
+"OTHER",
+"X",
+"",
+"Details of weather and environmental conditions during test"
+],
+[
+"SCPG_CONT",
+"OTHER",
+"X",
+"",
+"Subcontractors name"
+],
+[
+"SCPG_METH",
+"OTHER",
+"X",
+"",
+"Standard followed for testing"
+],
+[
+"SCPG_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"SCPG_CAR",
+"OTHER",
+"3DP",
+"",
+"Cone area ratio used to calculate qt"
+],
+[
+"SCPG_SLAR",
+"OTHER",
+"3DP",
+"",
+"Sleeve area ratio used to calculate ft"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. cone calibration records)"
+]
+],
+"desc": "Static Cone Penetration Tests - General",
+"parent": "LOCA"
+},
+"SCPT": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SCPG_TESN",
+"KEY",
+"X",
+"",
+"Test reference or push number"
+],
+[
+"SCPT_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth of result"
+],
+[
+"SCPT_RES",
+"OTHER",
+"3DP",
+"MPa",
+"Cone resistance (qc)"
+],
+[
+"SCPT_FRES",
+"OTHER",
+"4DP",
+"MPa",
+"Local unit side friction resistance (fs)"
+],
+[
+"SCPT_PWP1",
+"OTHER",
+"4DP",
+"MPa",
+"Face porewater pressure (u1)"
+],
+[
+"SCPT_PWP2",
+"OTHER",
+"4DP",
+"MPa",
+"Shoulder porewater pressure (u2)"
+],
+[
+"SCPT_PWP3",
+"OTHER",
+"4DP",
+"MPa",
+"Top of sleeve porewater pressure (u3)"
+],
+[
+"SCPT_CON",
+"OTHER",
+"4DP",
+"uS/cm",
+"Conductivity"
+],
+[
+"SCPT_TEMP",
+"OTHER",
+"4DP",
+"DegC",
+"Temperature"
+],
+[
+"SCPT_PH",
+"OTHER",
+"4DP",
+"",
+"pH reading"
+],
+[
+"SCPT_SLP1",
+"OTHER",
+"4DP",
+"deg",
+"Slope indicator no. 1"
+],
+[
+"SCPT_SLP2",
+"OTHER",
+"4DP",
+"deg",
+"Slope indicator no. 2"
+],
+[
+"SCPT_REDX",
+"OTHER",
+"4DP",
+"mV",
+"Redox potential reading"
+],
+[
+"SCPT_MAGT",
+"OTHER",
+"4DP",
+"nT",
+"Magnetic flux - Total (calculated)"
+],
+[
+"SCPT_MAGX",
+"OTHER",
+"4DP",
+"nT",
+"Magnetic flux - X"
+],
+[
+"SCPT_MAGY",
+"OTHER",
+"4DP",
+"nT",
+"Magnetic flux - Y"
+],
+[
+"SCPT_MAGZ",
+"OTHER",
+"4DP",
+"nT",
+"Magnetic flux - Z"
+],
+[
+"SCPT_SMP",
+"OTHER",
+"4DP",
+"%",
+"Soil moisture"
+],
+[
+"SCPT_NGAM",
+"OTHER",
+"4DP",
+"counts/s",
+"Natural gamma radiation"
+],
+[
+"SCPT_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"SCPT_FRR",
+"OTHER",
+"2DP",
+"%",
+"Friction ratio (Rf)"
+],
+[
+"SCPT_QT",
+"OTHER",
+"4DP",
+"MPa",
+"Corrected cone resistance (qt) piezocone only"
+],
+[
+"SCPT_FT",
+"OTHER",
+"4DP",
+"MPa",
+"Corrected sleeve resistance (ft) piezocone only"
+],
+[
+"SCPT_QE",
+"OTHER",
+"4DP",
+"MPa",
+"Effective cone resistance (qe) piezocone only"
+],
+[
+"SCPT_BDEN",
+"OTHER",
+"2DP",
+"Mg/m3",
+"Bulk density of material (measured or assumed)"
+],
+[
+"SCPT_CPO",
+"OTHER",
+"2DP",
+"kPa",
+"Total vertical stress (based on SCPT_BDEN)"
+],
+[
+"SCPT_CPOD",
+"OTHER",
+"2DP",
+"kPa",
+"Effective vertical stress (calculated from SCPT_CPO and SCPT_ISPP or SCPG_WAT)"
+],
+[
+"SCPT_QNET",
+"OTHER",
+"4DP",
+"MPa",
+"Net cone resistance (qn)"
+],
+[
+"SCPT_FRRC",
+"OTHER",
+"2DP",
+"%",
+"Corrected friction ratio (Rf') piezocone only"
+],
+[
+"SCPT_EXPP",
+"OTHER",
+"4DP",
+"MPa",
+"Excess pore pressure (u-uo) piezocone only"
+],
+[
+"SCPT_BQ",
+"OTHER",
+"4DP",
+"",
+"Pore pressure ratio (Bq) piezocone only"
+],
+[
+"SCPT_ISPP",
+"OTHER",
+"4DP",
+"MPa",
+"In situ pore pressure (uo) (measured or assumed where not simple hydrostatic based on SCPG_WAT)"
+],
+[
+"SCPT_NQT",
+"OTHER",
+"4DP",
+"",
+"Normalised cone resistance (Qt)"
+],
+[
+"SCPT_NFR",
+"OTHER",
+"4DP",
+"%",
+"Normalised friction ratio (Fr)"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. raw field data)"
+]
+],
+"desc": "Static Cone Penetration Tests - Data",
+"parent": "SCPG"
+},
+"SCPP": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SCPG_TESN",
+"KEY",
+"X",
+"",
+"Test reference or push number"
+],
+[
+"SCPP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of layer"
+],
+[
+"SCPP_BASE",
+"KEY",
+"2DP",
+"m",
+"Depth to base of layer"
+],
+[
+"SCPP_REF",
+"KEY",
+"X",
+"",
+"Interpretation reference"
+],
+[
+"SCPP_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"SCPP_CSBT",
+"OTHER",
+"X",
+"",
+"Interpreted Soil Type"
+],
+[
+"SCPP_CSU",
+"OTHER",
+"1DP",
+"kPa",
+"Undrained Shear Strength (Su); fine soils only"
+],
+[
+"SCPP_CRD",
+"OTHER",
+"1DP",
+"%",
+"Relative density (Dr); coarse soils only"
+],
+[
+"SCPP_CPHI",
+"OTHER",
+"1DP",
+"deg",
+"Internal Friction Angle; coarse soils only"
+],
+[
+"SCPP_CIC",
+"OTHER",
+"1DP",
+"",
+"Soil Behaviour Type Index (Ic)"
+],
+[
+"SCPP_CSPT",
+"OTHER",
+"0DP",
+"",
+"Equivalent SPT N60 value"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference"
+]
+],
+"desc": "Static Cone Penetration Tests - Derived Parameters",
+"parent": "SCPG"
+},
+"SAMP": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SAMP_BASE",
+"OTHER",
+"2DP",
+"m",
+"Depth to base of sample"
+],
+[
+"SAMP_DTIM",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"Date and time sample taken"
+],
+[
+"SAMP_UBLO",
+"OTHER",
+"0DP",
+"",
+"Number of blows required to drive sampler"
+],
+[
+"SAMP_CONT",
+"OTHER",
+"X",
+"",
+"Sample container"
+],
+[
+"SAMP_PREP",
+"OTHER",
+"X",
+"",
+"Details of sample preparation at time of sampling"
+],
+[
+"SAMP_SDIA",
+"OTHER",
+"0DP",
+"mm",
+"Sample diameter"
+],
+[
+"SAMP_WDEP",
+"OTHER",
+"2DP",
+"m",
+"Depth to water below ground surface at time of sampling"
+],
+[
+"SAMP_RECV",
+"OTHER",
+"0DP",
+"%",
+"Percentage of sample recovered"
+],
+[
+"SAMP_TECH",
+"OTHER",
+"X",
+"",
+"Sampling technique/method"
+],
+[
+"SAMP_MATX",
+"OTHER",
+"X",
+"",
+"Sample matrix"
+],
+[
+"SAMP_TYPC",
+"OTHER",
+"X",
+"",
+"Sample QA type (Normal, blank or spike)"
+],
+[
+"SAMP_WHO",
+"OTHER",
+"X",
+"",
+"Samplers initials or name"
+],
+[
+"SAMP_WHY",
+"OTHER",
+"X",
+"",
+"Reason for sampling"
+],
+[
+"SAMP_REM",
+"OTHER",
+"X",
+"",
+"Sample remarks"
+],
+[
+"SAMP_DESC",
+"OTHER",
+"X",
+"",
+"Sample/specimen description"
+],
+[
+"SAMP_DESD",
+"OTHER",
+"DT",
+"yyyy-mm-dd",
+"Date sample described"
+],
+[
+"SAMP_LOG",
+"OTHER",
+"X",
+"",
+"Person responsible for sample/specimen description"
+],
+[
+"SAMP_COND",
+"OTHER",
+"X",
+"",
+"Condition and representativeness of sample"
+],
+[
+"SAMP_CLSS",
+"OTHER",
+"X",
+"",
+"Sample classification as required by EN ISO 14688-1"
+],
+[
+"SAMP_BAR",
+"OTHER",
+"1DP",
+"bar",
+"Barometric pressure at time of sampling"
+],
+[
+"SAMP_TEMP",
+"OTHER",
+"0DP",
+"DegC",
+"Sample temperature at time of sampling"
+],
+[
+"SAMP_PRES",
+"OTHER",
+"1DP",
+"bar",
+"Gas pressure (above barometric)"
+],
+[
+"SAMP_FLOW",
+"OTHER",
+"1DP",
+"l/min",
+"Gas flow rate"
+],
+[
+"SAMP_ETIM",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"Date and time sampling completed"
+],
+[
+"SAMP_DURN",
+"OTHER",
+"T",
+"hh:mm:ss",
+"Sampling duration"
+],
+[
+"SAMP_CAPT",
+"OTHER",
+"X",
+"",
+"Caption used to describe sample"
+],
+[
+"SAMP_LINK",
+"OTHER",
+"RL",
+"",
+"Sample record link"
+],
+[
+"GEOL_STAT",
+"OTHER",
+"X",
+"",
+"Stratum reference shown on trial pit or traverse sketch"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. sampling field sheets, sample description records)"
+],
+[
+"SAMP_RECL",
+"OTHER",
+"0DP",
+"mm",
+"Length of sample recovered"
+]
+],
+"desc": "Sample Information",
+"parent": "LOCA"
+},
+"CORE": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"CORE_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of core run"
+],
+[
+"CORE_BASE",
+"KEY",
+"2DP",
+"m",
+"Depth to base of core run"
+],
+[
+"CORE_PREC",
+"OTHER",
+"0DP",
+"%",
+"Percentage of core recovered in core run (TCR)"
+],
+[
+"CORE_SREC",
+"OTHER",
+"0DP",
+"%",
+"Percentage of solid core recovered in core run (SCR)"
+],
+[
+"CORE_RQD",
+"OTHER",
+"0DP",
+"%",
+"Rock Quality Designation for core run (RQD)"
+],
+[
+"CORE_DIAM",
+"OTHER",
+"0DP",
+"mm",
+"Core diameter"
+],
+[
+"CORE_DURN",
+"OTHER",
+"T",
+"hh:mm",
+"Time taken to drill core run"
+],
+[
+"CORE_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. photographs of rock cores)"
+]
+],
+"desc": "Coring Information",
+"parent": "LOCA"
+},
+"DETL": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"DETL_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of detail description"
+],
+[
+"DETL_BASE",
+"KEY",
+"2DP",
+"m",
+"Depth to base of detail description"
+],
+[
+"DETL_DESC",
+"OTHER",
+"X",
+"",
+"Detail description"
+],
+[
+"DETL_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. logging field sheets)"
+]
+],
+"desc": "Stratum Detail Descriptions",
+"parent": "LOCA"
+},
+"WETH": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"WETH_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of weathering subdivision"
+],
+[
+"WETH_BASE",
+"KEY",
+"2DP",
+"m",
+"Depth to base of weathering subdivision"
+],
+[
+"WETH_SCH",
+"OTHER",
+"PA",
+"",
+"Weathering scheme"
+],
+[
+"WETH_SYS",
+"OTHER",
+"PA",
+"",
+"Material or mass weathering system"
+],
+[
+"WETH_WETH",
+"OTHER",
+"X",
+"",
+"Weathering classifier for WETH_SCH and WETH_SYS"
+],
+[
+"WETH_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. logging sheets)"
+]
+],
+"desc": "Weathering",
+"parent": "LOCA"
+},
+"FRAC": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"FRAC_FROM",
+"KEY",
+"2DP",
+"m",
+"Depth to top in hole, or distance to start on traverse, of the zone"
+],
+[
+"FRAC_TO",
+"KEY",
+"2DP",
+"m",
+"Depth to base in hole, or distance to end on traverse, of the zone"
+],
+[
+"FRAC_SET",
+"KEY",
+"X",
+"",
+"Discontinuity set reference"
+],
+[
+"FRAC_IMAX",
+"OTHER",
+"XN",
+"mm",
+"Maximum fracture spacing over zone"
+],
+[
+"FRAC_IAVE",
+"OTHER",
+"XN",
+"mm",
+"Average fracture (modal) spacing over zone"
+],
+[
+"FRAC_IMIN",
+"OTHER",
+"XN",
+"mm",
+"Minimum fracture spacing over zone"
+],
+[
+"FRAC_FI",
+"OTHER",
+"XN",
+"",
+"Fracture Index / frequency over zone (fractures per metre)"
+],
+[
+"FRAC_REM",
+"OTHER",
+"X",
+"",
+"Comments on fracture set"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. logging field sheets)"
+]
+],
+"desc": "Fracture Spacing",
+"parent": "LOCA"
+},
+"GRAG": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"SPEC_DESC",
+"OTHER",
+"X",
+"",
+"Specimen description"
+],
+[
+"SPEC_PREP",
+"OTHER",
+"X",
+"",
+"Details of specimen preparation including time between preparation and testing"
+],
+[
+"GRAG_UC",
+"OTHER",
+"1SF",
+"",
+"Uniformity coefficient D60/D10"
+],
+[
+"GRAG_VCRE",
+"OTHER",
+"1DP",
+"%",
+"Percentage of material tested greater than 63mm (cobbles)"
+],
+[
+"GRAG_GRAV",
+"OTHER",
+"1DP",
+"%",
+"Percentage of material tested in range 63mm to 2mm (gravel)"
+],
+[
+"GRAG_SAND",
+"OTHER",
+"1DP",
+"%",
+"Percentage of material tested in range 2mm to 63um (sand)"
+],
+[
+"GRAG_SILT",
+"OTHER",
+"1DP",
+"%",
+"Percentage of material tested in range 63um to 2um (silt)"
+],
+[
+"GRAG_CLAY",
+"OTHER",
+"1DP",
+"%",
+"Percentage of material tested less than 2um (clay)"
+],
+[
+"GRAG_FINE",
+"OTHER",
+"1DP",
+"%",
+"Percentage less than 63um"
+],
+[
+"GRAG_REM",
+"OTHER",
+"X",
+"",
+"Remarks including commentary on effect of specimen disturbance on test result"
+],
+[
+"GRAG_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"GRAG_LAB",
+"OTHER",
+"X",
+"",
+"Name of testing laboratory/organization"
+],
+[
+"GRAG_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. equipment calibrations)"
+],
+[
+"SPEC_BASE",
+"OTHER",
+"2DP",
+"m",
+"Depth to base of specimen"
+],
+[
+"GRAG_DEV",
+"OTHER",
+"X",
+"",
+"Any deviation from the specified test procedure, and any other information that could be important for interpreting the test results."
+],
+[
+"GRAG_PDEN",
+"OTHER",
+"XN",
+"Mg/m3",
+"Particle density used in calculations with prefix # if value assumed"
+],
+[
+"GRAG_PRET",
+"OTHER",
+"X",
+"",
+"Method of pre-treatment, when applied"
+],
+[
+"GRAG_SUFF",
+"OTHER",
+"YN",
+"",
+"Amount of soil tested was sufficient to comply with recommended minimum mass"
+],
+[
+"GRAG_EXCL",
+"OTHER",
+"X",
+"",
+"Remark if the size of the fractions is not expressed as percentage of total dry mass, together with the nature and amount of fractions excluded."
+],
+[
+"GRAG_CC",
+"OTHER",
+"1SF",
+"",
+"Coefficient of curvature"
+]
+],
+"desc": "Particle Size Distribution Analysis - General",
+"parent": "SAMP"
+},
+"GRAT": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"GRAT_SIZE",
+"KEY",
+"3SF",
+"mm",
+"Sieve or particle size"
+],
+[
+"GRAT_PERP",
+"OTHER",
+"0DP",
+"%",
+"Percentage passing/finer than GRAT_SIZE"
+],
+[
+"GRAT_TYPE",
+"OTHER",
+"PA",
+"",
+"Test type"
+],
+[
+"GRAT_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+]
+],
+"desc": "Particle Size Distribution Analysis - Data",
+"parent": "GRAG"
+},
+"GCHM": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"GCHM_CODE",
+"KEY+REQUIRED",
+"PA",
+"",
+"Determinand"
+],
+[
+"GCHM_METH",
+"KEY",
+"X",
+"",
+"Test method"
+],
+[
+"GCHM_TTYP",
+"KEY+REQUIRED",
+"PA",
+"",
+"Test type"
+],
+[
+"GCHM_RESL",
+"OTHER",
+"U",
+"",
+"Test result"
+],
+[
+"GCHM_UNIT",
+"REQUIRED",
+"PU",
+"",
+"Test result units"
+],
+[
+"GCHM_NAME",
+"OTHER",
+"X",
+"",
+"Client/laboratory preferred name of determinand"
+],
+[
+"SPEC_DESC",
+"OTHER",
+"X",
+"",
+"Specimen description"
+],
+[
+"SPEC_PREP",
+"OTHER",
+"X",
+"",
+"Details of specimen preparation including time between preparation and testing"
+],
+[
+"GCHM_REM",
+"OTHER",
+"X",
+"",
+"Remarks on test"
+],
+[
+"GCHM_LAB",
+"OTHER",
+"X",
+"",
+"Name of testing laboratory/organization"
+],
+[
+"GCHM_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+],
+[
+"GCHM_RTXT",
+"OTHER",
+"X",
+"",
+"Reported result"
+],
+[
+"GCHM_DLM",
+"OTHER",
+"U",
+"",
+"Lower detection limit"
+],
+[
+"SPEC_BASE",
+"OTHER",
+"2DP",
+"m",
+"Depth to base of specimen"
+],
+[
+"GCHM_DEV",
+"OTHER",
+"X",
+"",
+"Deviations from the test method"
+],
+[
+"GCHM_SGRP",
+"OTHER",
+"X",
+"",
+"Sample delivery or batch code"
+],
+[
+"GCHM_LSID",
+"OTHER",
+"X",
+"",
+"Laboratory sample ID"
+],
+[
+"GCHM_RDAT",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"Sample receipt date/time at laboratory"
+],
+[
+"GCHM_DTIM",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"Analysis date and time"
+],
+[
+"GCHM_TEST",
+"OTHER",
+"X",
+"",
+"Test of Suite name"
+],
+[
+"GCHM_IREF",
+"OTHER",
+"X",
+"",
+"Instrument reference no or identifier"
+],
+[
+"GCHM_ITYP",
+"OTHER",
+"X",
+"",
+"Instrument type"
+],
+[
+"GCHM_SIZE",
+"OTHER",
+"0DP",
+"mm",
+"Size of material removed prior to test; value given indicates lowest sized material removed"
+],
+[
+"GCHM_PERP",
+"OTHER",
+"1DP",
+"%",
+"Percentage of material removed"
+]
+],
+"desc": "Geotechnical Chemistry Testing",
+"parent": "SAMP"
+},
+"WSTG": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"WSTG_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to water strike"
+],
+[
+"WSTG_DTIM",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"Date and time of water strike"
+],
+[
+"WSTG_SEAL",
+"OTHER",
+"2DP",
+"m",
+"Depth at which water strike sealed by casing"
+],
+[
+"WSTG_CAS",
+"OTHER",
+"2DP",
+"m",
+"Casing depth at time of water strike"
+],
+[
+"WSTG_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+]
+],
+"desc": "Water Strike - General",
+"parent": "LOCA"
+},
+"WSTD": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"WSTG_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to water strike"
+],
+[
+"WSTD_NMIN",
+"KEY",
+"0DP",
+"min",
+"Minutes after strike"
+],
+[
+"WSTD_POST",
+"OTHER",
+"2DP",
+"m",
+"Depth to water after WSTD_NMIN minutes"
+],
+[
+"WSTD_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+]
+],
+"desc": "Water Strike - Details",
+"parent": "WSTG"
+},
+"MONG": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"MONG_ID",
+"KEY",
+"X",
+"",
+"Monitoring point reference"
+],
+[
+"MONG_DIS",
+"KEY",
+"2DP",
+"m",
+"Initial distance of monitoring point from LOCA_ID"
+],
+[
+"PIPE_REF",
+"OTHER",
+"X",
+"",
+"Pipe reference"
+],
+[
+"MONG_DATE",
+"OTHER",
+"DT",
+"yyyy-mm-dd",
+"Installation date"
+],
+[
+"MONG_TYPE",
+"OTHER",
+"PA",
+"",
+"Instrument type"
+],
+[
+"MONG_DETL",
+"OTHER",
+"X",
+"",
+"Details of instrument"
+],
+[
+"MONG_TRZ",
+"OTHER",
+"2DP",
+"m",
+"Distance to start of response zone from LOCA_ID datum"
+],
+[
+"MONG_BRZ",
+"OTHER",
+"2DP",
+"m",
+"Distance to end of response zone from LOCA_ID datum"
+],
+[
+"MONG_BRGA",
+"OTHER",
+"0DP",
+"deg",
+"Bearing of monitoring axis A (compass bearing)"
+],
+[
+"MONG_BRGB",
+"OTHER",
+"0DP",
+"deg",
+"Bearing of monitoring axis B (compass bearing)"
+],
+[
+"MONG_BRGC",
+"OTHER",
+"0DP",
+"deg",
+"Bearing of monitoring axis C (compass bearing)"
+],
+[
+"MONG_INCA",
+"OTHER",
+"0DP",
+"deg",
+"Inclination of instrument axis A (measured positively down from horizontal)"
+],
+[
+"MONG_INCB",
+"OTHER",
+"0DP",
+"deg",
+"Inclination of instrument axis B (measured positively down from horizontal)"
+],
+[
+"MONG_INCC",
+"OTHER",
+"0DP",
+"deg",
+"Inclination of instrument axis C (measured positively down from horizontal)"
+],
+[
+"MONG_RSCA",
+"OTHER",
+"X",
+"",
+"Reading sign convention in direction A"
+],
+[
+"MONG_RSCB",
+"OTHER",
+"X",
+"",
+"Reading sign convention in direction B"
+],
+[
+"MONG_RSCC",
+"OTHER",
+"X",
+"",
+"Reading sign convention in direction C"
+],
+[
+"MONG_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"MONG_CONT",
+"OTHER",
+"X",
+"",
+"Contractor who installed monitoring instrument"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. equipment calibrations)"
+]
+],
+"desc": "Monitoring Installations and Instruments",
+"parent": "LOCA"
+},
+"MOND": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"MONG_ID",
+"KEY",
+"X",
+"",
+"Monitoring point reference"
+],
+[
+"MONG_DIS",
+"KEY",
+"2DP",
+"m",
+"Initial distance of monitoring point from LOCA_ID datum"
+],
+[
+"MOND_DTIM",
+"KEY",
+"DT",
+"yyyy-mm-ddThh:mm:ss",
+"Date and time of reading"
+],
+[
+"MOND_TYPE",
+"KEY",
+"PA",
+"",
+"Reading type"
+],
+[
+"MOND_REF",
+"KEY",
+"X",
+"",
+"Reading reference"
+],
+[
+"MOND_INST",
+"OTHER",
+"X",
+"",
+"Instrument reference / serial number"
+],
+[
+"MOND_RDNG",
+"OTHER",
+"XN",
+"",
+"Reading"
+],
+[
+"MOND_UNIT",
+"REQUIRED",
+"PU",
+"",
+"Units of reading"
+],
+[
+"MOND_METH",
+"OTHER",
+"X",
+"",
+"Measurement method"
+],
+[
+"MOND_LIM",
+"OTHER",
+"U",
+"",
+"Instrument/method reading/detection limit"
+],
+[
+"MOND_ULIM",
+"OTHER",
+"U",
+"",
+"Instrument/method upper reading/detection (when appropriate)"
+],
+[
+"MOND_NAME",
+"OTHER",
+"X",
+"",
+"Client preferred name of measurement"
+],
+[
+"MOND_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"MOND_CONT",
+"OTHER",
+"X",
+"",
+"Organization taking reading"
+],
+[
+"MOND_REM",
+"OTHER",
+"X",
+"",
+"Comments on reading"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. monitoring field sheets, instrument logging file)"
+]
+],
+"desc": "Monitoring Readings",
+"parent": "MONG"
+},
+"LLPL": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"SPEC_DESC",
+"OTHER",
+"X",
+"",
+"Specimen description"
+],
+[
+"SPEC_PREP",
+"OTHER",
+"X",
+"",
+"Details of specimen preparation including time between preparation and testing"
+],
+[
+"LLPL_LL",
+"OTHER",
+"0DP",
+"%",
+"Liquid limit"
+],
+[
+"LLPL_PL",
+"OTHER",
+"XN",
+"%",
+"Plastic limit"
+],
+[
+"LLPL_PI",
+"OTHER",
+"0DP",
+"",
+"Plasticity Index"
+],
+[
+"LLPL_425",
+"OTHER",
+"0DP",
+"%",
+"Percentage passing 0.425mm sieve"
+],
+[
+"LLPL_PREP",
+"OTHER",
+"X",
+"",
+"Method of preparation"
+],
+[
+"LLPL_STAB",
+"OTHER",
+"2SF",
+"%",
+"Amount of stabiliser added"
+],
+[
+"LLPL_STYP",
+"OTHER",
+"X",
+"",
+"Type of stabiliser added"
+],
+[
+"LLPL_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"LLPL_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"LLPL_LAB",
+"OTHER",
+"X",
+"",
+"Name of testing laboratory/organization"
+],
+[
+"LLPL_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+],
+[
+"SPEC_BASE",
+"OTHER",
+"2DP",
+"m",
+"Depth to base of specimen"
+],
+[
+"LLPL_DEV",
+"OTHER",
+"X",
+"",
+"Deviation from the specified procedure"
+],
+[
+"LLPL_TYPE",
+"OTHER",
+"PA",
+"",
+"Type of test"
+],
+[
+"LLPL_POIN",
+"OTHER",
+"PA",
+"",
+"Number of points"
+],
+[
+"LLPL_CONE",
+"OTHER",
+"PA",
+"",
+"For fall cone method, type of cone"
+],
+[
+"LLPL_1PRE",
+"OTHER",
+"1DP",
+"mm",
+"Mean of test readings, if one-point test."
+],
+[
+"LLPL_1PCF",
+"OTHER",
+"3DP",
+"",
+"Correlation factor if one-point test."
+],
+[
+"LLPL_SIZE",
+"OTHER",
+"U",
+"mm",
+"Sieve size if other than 0.425mm"
+],
+[
+"LLPL_PASS",
+"OTHER",
+"2SF",
+"%",
+"Percentage passing LLPL_SIZE sieve if other than 0.425mm"
+],
+[
+"LLPL_WC",
+"OTHER",
+"X",
+"%",
+"The water content of the specimen before removal of particles prior to determination liquid or plastic limits, if measured"
+]
+],
+"desc": "Liquid and Plastic Limit Tests",
+"parent": "SAMP"
+},
+"LNMC": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"SPEC_DESC",
+"OTHER",
+"X",
+"",
+"Specimen description"
+],
+[
+"SPEC_PREP",
+"OTHER",
+"X",
+"",
+"Details of specimen preparation including time between preparation and testing"
+],
+[
+"LNMC_MC",
+"OTHER",
+"X",
+"%",
+"Water/moisture content"
+],
+[
+"LNMC_TEMP",
+"OTHER",
+"0DP",
+"DegC",
+"Temperature sample dried at"
+],
+[
+"LNMC_STAB",
+"OTHER",
+"2SF",
+"%",
+"Amount of stabiliser added"
+],
+[
+"LNMC_STYP",
+"OTHER",
+"X",
+"",
+"Type of stabiliser added"
+],
+[
+"LNMC_ISNT",
+"OTHER",
+"YN",
+"",
+"Is test result assumed to be a natural water/moisture content"
+],
+[
+"LNMC_COMM",
+"OTHER",
+"X",
+"",
+"Reason water/moisture content is assumed to be other than natural"
+],
+[
+"LNMC_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"LNMC_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"LNMC_LAB",
+"OTHER",
+"X",
+"",
+"Name of testing laboratory/organization"
+],
+[
+"LNMC_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+],
+[
+"SPEC_BASE",
+"OTHER",
+"2DP",
+"m",
+"Depth to base of specimen"
+],
+[
+"LNMC_DEV",
+"OTHER",
+"X",
+"",
+"Deviation from the specified procedure"
+]
+],
+"desc": "Water/moisture Content Tests",
+"parent": "SAMP"
+},
+"LDEN": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"SPEC_DESC",
+"OTHER",
+"X",
+"",
+"Specimen description"
+],
+[
+"SPEC_PREP",
+"OTHER",
+"X",
+"",
+"Details of specimen preparation including time between preparation and testing"
+],
+[
+"LDEN_TYPE",
+"OTHER",
+"PA",
+"",
+"Type of test performed"
+],
+[
+"LDEN_COND",
+"OTHER",
+"PA",
+"",
+"Sample condition"
+],
+[
+"LDEN_SMTY",
+"OTHER",
+"PA",
+"",
+"Type of sample"
+],
+[
+"LDEN_MC",
+"OTHER",
+"X",
+"%",
+"Water/moisture content"
+],
+[
+"LDEN_BDEN",
+"OTHER",
+"2DP",
+"Mg/m3",
+"Bulk density"
+],
+[
+"LDEN_DDEN",
+"OTHER",
+"2DP",
+"Mg/m3",
+"Dry density"
+],
+[
+"LDEN_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"LDEN_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"LDEN_LAB",
+"OTHER",
+"X",
+"",
+"Name of testing laboratory/organization"
+],
+[
+"LDEN_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+],
+[
+"SPEC_BASE",
+"OTHER",
+"2DP",
+"m",
+"Depth to base of specimen"
+],
+[
+"LDEN_DEV",
+"OTHER",
+"X",
+"",
+"Specimen size if less than 50cm3 and any deviation from the specified procedure"
+]
+],
+"desc": "Density Tests",
+"parent": "SAMP"
+},
+"ERES": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location Identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Laboratory specimen reference or Laboratory ID"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"ERES_CODE",
+"KEY+REQUIRED",
+"PA",
+"",
+"Chemical code"
+],
+[
+"ERES_METH",
+"KEY",
+"X",
+"",
+"Test method"
+],
+[
+"ERES_MATX",
+"KEY+REQUIRED",
+"PA",
+"",
+"Laboratory test matrix"
+],
+[
+"ERES_RTYP",
+"KEY",
+"PA",
+"",
+"Run type (Initial or Reanalysis)"
+],
+[
+"ERES_TESN",
+"OTHER",
+"X",
+"",
+"Test reference"
+],
+[
+"ERES_NAME",
+"OTHER",
+"X",
+"",
+"Chemical name"
+],
+[
+"ERES_TNAM",
+"OTHER",
+"X",
+"",
+"Laboratory analytical test name"
+],
+[
+"ERES_RVAL",
+"OTHER",
+"U",
+"",
+"Result value"
+],
+[
+"ERES_RUNI",
+"REQUIRED",
+"PU",
+"",
+"Result unit"
+],
+[
+"ERES_RTXT",
+"OTHER",
+"X",
+"",
+"Reported result"
+],
+[
+"ERES_RTCD",
+"OTHER",
+"PA",
+"",
+"Result type"
+],
+[
+"ERES_RRES",
+"OTHER",
+"YN",
+"",
+"Reportable result"
+],
+[
+"ERES_DETF",
+"OTHER",
+"YN",
+"",
+"Detect flag"
+],
+[
+"ERES_ORG",
+"OTHER",
+"YN",
+"",
+"Organic"
+],
+[
+"ERES_IQLF",
+"OTHER",
+"X",
+"",
+"Interpreted qualifiers"
+],
+[
+"ERES_LQLF",
+"OTHER",
+"X",
+"",
+"Laboratory qualifiers"
+],
+[
+"ERES_RDLM",
+"OTHER",
+"U",
+"",
+"Reporting detection limit"
+],
+[
+"ERES_MDLM",
+"OTHER",
+"U",
+"",
+"Method detection limit"
+],
+[
+"ERES_QLM",
+"OTHER",
+"U",
+"",
+"Quantification limit"
+],
+[
+"ERES_DUNI",
+"OTHER",
+"PU",
+"",
+"Unit of detection/quantification limits"
+],
+[
+"ERES_TICP",
+"OTHER",
+"0DP",
+"%",
+"Tentatively Identified Compound (TIC) probability"
+],
+[
+"ERES_TICT",
+"OTHER",
+"0DP",
+"s",
+"Tentatively Identified Compound (TIC) retention time"
+],
+[
+"ERES_RDAT",
+"OTHER",
+"DT",
+"yyyy-mm-dd",
+"Sample receipt date at laboratory"
+],
+[
+"ERES_SGRP",
+"OTHER",
+"X",
+"",
+"Sample delivery or batch code"
+],
+[
+"SPEC_PREP",
+"OTHER",
+"X",
+"",
+"Details of specimen preparation including time between preparation and testing"
+],
+[
+"SPEC_DESC",
+"OTHER",
+"X",
+"",
+"Specimen description"
+],
+[
+"ERES_DTIM",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"Analysis date and time date"
+],
+[
+"ERES_TEST",
+"OTHER",
+"X",
+"",
+"Test Name as defined in LBST_TEST during electronic scheduling"
+],
+[
+"ERES_TORD",
+"OTHER",
+"X",
+"",
+"Total or dissolved"
+],
+[
+"ERES_LOCN",
+"OTHER",
+"PA",
+"",
+"Analysis location"
+],
+[
+"ERES_BAS",
+"OTHER",
+"PA",
+"",
+"Basis"
+],
+[
+"ERES_DIL",
+"OTHER",
+"0DP",
+"",
+"Dilution factor"
+],
+[
+"ERES_LMTH",
+"OTHER",
+"X",
+"",
+"Leachate preparation method"
+],
+[
+"ERES_LDTM",
+"OTHER",
+"DT",
+"yyyy-mm-ddThh:mm",
+"Leachate preparation date and time"
+],
+[
+"ERES_IREF",
+"OTHER",
+"X",
+"",
+"Instrument Reference No or Identifier"
+],
+[
+"ERES_SIZE",
+"OTHER",
+"0DP",
+"mm",
+"Size of material removed prior to test; value given indicates lowest sized material removed"
+],
+[
+"ERES_PERP",
+"OTHER",
+"1DP",
+"%",
+"Percentage of material removed"
+],
+[
+"ERES_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"ERES_LAB",
+"OTHER",
+"X",
+"",
+"Name of testing laboratory/organization"
+],
+[
+"ERES_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+]
+],
+"desc": "Environmental Contaminant Testing",
+"parent": "SAMP"
+},
+"TRIG": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"SPEC_DESC",
+"OTHER",
+"X",
+"",
+"Specimen description"
+],
+[
+"SPEC_PREP",
+"OTHER",
+"X",
+"",
+"Details of specimen preparation including time between preparation and testing"
+],
+[
+"TRIG_TYPE",
+"OTHER",
+"PA",
+"",
+"Test type"
+],
+[
+"TRIG_COND",
+"OTHER",
+"PA",
+"",
+"Sample condition"
+],
+[
+"TRIG_REM",
+"OTHER",
+"X",
+"",
+"Remarks including commentary on effect of specimen disturbance on test result"
+],
+[
+"TRIG_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"TRIG_LAB",
+"OTHER",
+"X",
+"",
+"Name of testing laboratory/organization"
+],
+[
+"TRIG_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. equipment calibrations)"
+],
+[
+"SPEC_BASE",
+"OTHER",
+"2DP",
+"m",
+"Depth to base of specimen"
+],
+[
+"TRIG_DEV",
+"OTHER",
+"X",
+"",
+"Deviation from the specified procedure"
+]
+],
+"desc": "Triaxial Tests - Total Stress - General",
+"parent": "SAMP"
+},
+"TRIT": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"TRIT_TESN",
+"KEY",
+"X",
+"",
+"Triaxial test/stage reference"
+],
+[
+"TRIT_SDIA",
+"OTHER",
+"2DP",
+"mm",
+"Specimen diameter"
+],
+[
+"TRIT_SLEN",
+"OTHER",
+"2DP",
+"mm",
+"Specimen length"
+],
+[
+"TRIT_IMC",
+"OTHER",
+"X",
+"%",
+"Specimen initial water/moisture content"
+],
+[
+"TRIT_FMC",
+"OTHER",
+"X",
+"%",
+"Specimen final water/moisture content"
+],
+[
+"TRIT_CELL",
+"OTHER",
+"0DP",
+"kPa",
+"Total cell pressure"
+],
+[
+"TRIT_DEVF",
+"OTHER",
+"0DP",
+"kPa",
+"Corrected deviator stress at failure"
+],
+[
+"TRIT_BDEN",
+"OTHER",
+"2DP",
+"Mg/m3",
+"Initial bulk density"
+],
+[
+"TRIT_DDEN",
+"OTHER",
+"2DP",
+"Mg/m3",
+"Initial dry density"
+],
+[
+"TRIT_STRN",
+"OTHER",
+"2SF",
+"%",
+"Axial strain at failure"
+],
+[
+"TRIT_CU",
+"OTHER",
+"0DP",
+"kPa",
+"Undrained Shear Strength at failure"
+],
+[
+"TRIT_MODE",
+"OTHER",
+"PA",
+"",
+"Mode of failure"
+],
+[
+"TRIT_REM",
+"OTHER",
+"X",
+"",
+"Comments"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+],
+[
+"TRIT_FZWC",
+"OTHER",
+"X",
+"%",
+"Failure zone water content, if measured"
+],
+[
+"TRIT_RATE",
+"OTHER",
+"2SF",
+"%/min",
+"Mean rate of shear"
+]
+],
+"desc": "Triaxial Tests - Total Stress - Data",
+"parent": "TRIG"
+},
+"CONG": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"SPEC_DESC",
+"OTHER",
+"X",
+"",
+"Specimen description"
+],
+[
+"SPEC_PREP",
+"OTHER",
+"X",
+"",
+"Details of specimen preparation including time between preparation and testing"
+],
+[
+"CONG_TYPE",
+"OTHER",
+"PA",
+"",
+"Type of consolidation test"
+],
+[
+"CONG_COND",
+"OTHER",
+"PA",
+"",
+"Sample condition"
+],
+[
+"CONG_SDIA",
+"OTHER",
+"2DP",
+"mm",
+"Test specimen diameter"
+],
+[
+"CONG_HIGT",
+"OTHER",
+"2DP",
+"mm",
+"Test specimen height"
+],
+[
+"CONG_MCI",
+"OTHER",
+"X",
+"%",
+"Initial water/moisture content"
+],
+[
+"CONG_MCF",
+"OTHER",
+"X",
+"%",
+"Final water/moisture content"
+],
+[
+"CONG_BDEN",
+"OTHER",
+"2DP",
+"Mg/m3",
+"Initial bulk density"
+],
+[
+"CONG_DDEN",
+"OTHER",
+"2DP",
+"Mg/m3",
+"Initial dry density"
+],
+[
+"CONG_PDEN",
+"OTHER",
+"XN",
+"Mg/m3",
+"Particle density with prefix # if value assumed"
+],
+[
+"CONG_SATR",
+"OTHER",
+"0DP",
+"%",
+"Initial degree of saturation"
+],
+[
+"CONG_SPRS",
+"OTHER",
+"2SF",
+"kPa",
+"Swelling pressure"
+],
+[
+"CONG_SATH",
+"OTHER",
+"1DP",
+"%",
+"Height change of specimen on saturation, or flooding as percentage of original height (BS1377 Settlement on saturation test)"
+],
+[
+"CONG_IVR",
+"OTHER",
+"3DP",
+"",
+"Initial voids ratio"
+],
+[
+"CONG_REM",
+"OTHER",
+"X",
+"",
+"Remarks including commentary on effect of specimen disturbance on test result"
+],
+[
+"CONG_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"CONG_LAB",
+"OTHER",
+"X",
+"",
+"Name of testing laboratory/organization"
+],
+[
+"CONG_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. equipment calibrations)"
+],
+[
+"SPEC_BASE",
+"OTHER",
+"2DP",
+"m",
+"Depth to base of specimen"
+],
+[
+"CONG_DEV",
+"OTHER",
+"X",
+"",
+"Deviations from the test method"
+],
+[
+"CONG_MCIS",
+"OTHER",
+"X",
+"",
+"Initial water/moisture content source"
+],
+[
+"CONG_CORR",
+"OTHER",
+"YN",
+"",
+"Results corrected for equipment deformation"
+]
+],
+"desc": "Consolidation Tests - General",
+"parent": "SAMP"
+},
+"CONS": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"SAMP_TOP",
+"KEY",
+"2DP",
+"m",
+"Depth to top of sample"
+],
+[
+"SAMP_REF",
+"KEY",
+"X",
+"",
+"Sample reference"
+],
+[
+"SAMP_TYPE",
+"KEY",
+"PA",
+"",
+"Sample type"
+],
+[
+"SAMP_ID",
+"KEY",
+"ID",
+"",
+"Sample unique identifier"
+],
+[
+"SPEC_REF",
+"KEY",
+"X",
+"",
+"Specimen reference"
+],
+[
+"SPEC_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to top of test specimen"
+],
+[
+"CONS_INCN",
+"KEY",
+"X",
+"",
+"Oedometer stress increment"
+],
+[
+"CONS_IVR",
+"OTHER",
+"3DP",
+"",
+"Voids ratio at start of increment"
+],
+[
+"CONS_INCF",
+"OTHER",
+"0DP",
+"kPa",
+"Stress at end of stress increment/decrement"
+],
+[
+"CONS_INCE",
+"OTHER",
+"3DP",
+"",
+"Voids ratio at end of stress increment"
+],
+[
+"CONS_INMV",
+"OTHER",
+"2SF",
+"m2/MN",
+"Reported coefficient of volume compressibility over stress increment"
+],
+[
+"CONS_INSC",
+"OTHER",
+"2SF",
+"",
+"Coefficient of secondary compression over stress increment"
+],
+[
+"CONS_CVRT",
+"OTHER",
+"2SF",
+"m2/yr",
+"Coefficient of consolidation over stress increment determined by the root time method"
+],
+[
+"CONS_CVLG",
+"OTHER",
+"2SF",
+"m2/yr",
+"Coefficient of consolidation over stress increment determined by the log time method"
+],
+[
+"CONS_TEMP",
+"OTHER",
+"1DP",
+"DegC",
+"Average temperature over stress increment"
+],
+[
+"CONS_REM",
+"OTHER",
+"X",
+"",
+"Remarks"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+]
+],
+"desc": "Consolidation Tests - Data",
+"parent": "CONG"
+},
+"DPRG": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"DPRG_TESN",
+"KEY",
+"X",
+"",
+"Test reference"
+],
+[
+"DPRG_DATE",
+"OTHER",
+"DT",
+"yyyy-mm-dd",
+"Test date"
+],
+[
+"DPRG_TYPE",
+"OTHER",
+"PA",
+"",
+"Dynamic probe type"
+],
+[
+"DPRG_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"DPRG_MASS",
+"OTHER",
+"1DP",
+"kg",
+"Hammer mass"
+],
+[
+"DPRG_DROP",
+"OTHER",
+"0DP",
+"mm",
+"Standard drop"
+],
+[
+"DPRG_CONE",
+"OTHER",
+"1DP",
+"mm",
+"Cone base diameter"
+],
+[
+"DPRG_ROD",
+"OTHER",
+"0DP",
+"mm",
+"Rod diameter"
+],
+[
+"DPRG_TANV",
+"OTHER",
+"X",
+"",
+"Type of anvil"
+],
+[
+"DPRG_DAMP",
+"OTHER",
+"X",
+"",
+"Type of anvil damper"
+],
+[
+"DPRG_TIP",
+"OTHER",
+"2DP",
+"m",
+"Depth of cone if left in ground"
+],
+[
+"DPRG_REM",
+"OTHER",
+"X",
+"",
+"General remarks"
+],
+[
+"DPRG_ANG",
+"OTHER",
+"0DP",
+"deg",
+"Cone angle"
+],
+[
+"DPRG_RMSS",
+"OTHER",
+"1DP",
+"kg/m",
+"Rod mass"
+],
+[
+"DPRG_PARF",
+"OTHER",
+"X",
+"",
+"Precautions against rod friction"
+],
+[
+"DPRG_PDIU",
+"OTHER",
+"X",
+"",
+"Pre-drilling if used"
+],
+[
+"DPRG_BCF",
+"OTHER",
+"X",
+"",
+"Blow count frequency"
+],
+[
+"DPRG_GW",
+"OTHER",
+"2DP",
+"m",
+"Groundwater level"
+],
+[
+"DPRG_REET",
+"OTHER",
+"X",
+"",
+"Reasons for early end of test"
+],
+[
+"DPRG_ENV",
+"OTHER",
+"X",
+"",
+"Details of weather and environmental conditions during test"
+],
+[
+"DPRG_CONT",
+"OTHER",
+"X",
+"",
+"Name of testing organization"
+],
+[
+"DPRG_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. equipment calibrations)"
+]
+],
+"desc": "Dynamic Probe Tests - General",
+"parent": "LOCA"
+},
+"DPRB": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"DPRG_TESN",
+"KEY",
+"X",
+"",
+"Test reference"
+],
+[
+"DPRB_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth to start of dynamic probe increment"
+],
+[
+"DPRB_BLOW",
+"OTHER",
+"0DP",
+"",
+"Dynamic probe blows for increment DPRB_INC"
+],
+[
+"DPRB_CBLW",
+"OTHER",
+"0DP",
+"",
+"Cumulative blows for test"
+],
+[
+"DPRB_TORQ",
+"OTHER",
+"0DP",
+"Nm",
+"Maximum torque required to rotate rods"
+],
+[
+"DPRB_DEL",
+"OTHER",
+"T",
+"hh:mm",
+"Delay before increment started"
+],
+[
+"DPRB_INC",
+"OTHER",
+"0DP",
+"mm",
+"Dynamic probe increment"
+],
+[
+"DPRB_REM",
+"OTHER",
+"X",
+"",
+"Notes on events during increment"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference"
+]
+],
+"desc": "Dynamic Probe Tests - Data",
+"parent": "DPRG"
+},
+"IPEN": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"IPEN_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth of test"
+],
+[
+"IPEN_TESN",
+"KEY",
+"X",
+"",
+"Test reference"
+],
+[
+"IPEN_IPEN",
+"OTHER",
+"XN",
+"kPa",
+"Hand penetrometer result"
+],
+[
+"IPEN_DATE",
+"OTHER",
+"DT",
+"yyyy-mm-dd",
+"Test date"
+],
+[
+"IPEN_REM",
+"OTHER",
+"X",
+"",
+"Remarks on test"
+],
+[
+"IPEN_ENV",
+"OTHER",
+"X",
+"",
+"Details of weather and environmental conditions during test"
+],
+[
+"IPEN_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"IPEN_CONT",
+"OTHER",
+"X",
+"",
+"Name of testing organization"
+],
+[
+"IPEN_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"GEOL_STAT",
+"OTHER",
+"X",
+"",
+"Stratum reference shown on trial pit or traverse sketch"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+]
+],
+"desc": "In Situ Hand Penetrometer Tests",
+"parent": "LOCA"
+},
+"IVAN": {
+"h": [
+[
+"LOCA_ID",
+"KEY",
+"ID",
+"",
+"Location identifier"
+],
+[
+"IVAN_DPTH",
+"KEY",
+"2DP",
+"m",
+"Depth of vane test"
+],
+[
+"IVAN_TESN",
+"KEY",
+"X",
+"",
+"Test reference"
+],
+[
+"IVAN_TYPE",
+"OTHER",
+"PA",
+"",
+"Vane type"
+],
+[
+"IVAN_IVAN",
+"OTHER",
+"XN",
+"kPa",
+"Vane test result"
+],
+[
+"IVAN_IVAR",
+"OTHER",
+"XN",
+"kPa",
+"Vane test residual result"
+],
+[
+"IVAN_DATE",
+"OTHER",
+"DT",
+"yyyy-mm-dd",
+"Test date"
+],
+[
+"IVAN_REM",
+"OTHER",
+"X",
+"",
+"Details of vane test, vane size"
+],
+[
+"IVAN_ENV",
+"OTHER",
+"X",
+"",
+"Details of weather and environmental conditions during test"
+],
+[
+"IVAN_METH",
+"OTHER",
+"X",
+"",
+"Test method"
+],
+[
+"IVAN_CONT",
+"OTHER",
+"X",
+"",
+"Name of testing organization"
+],
+[
+"IVAN_CRED",
+"OTHER",
+"X",
+"",
+"Accrediting body and reference number (when appropriate)"
+],
+[
+"TEST_STAT",
+"OTHER",
+"X",
+"",
+"Test status"
+],
+[
+"GEOL_STAT",
+"OTHER",
+"X",
+"",
+"Stratum reference shown on trial pit or traverse sketch"
+],
+[
+"FILE_FSET",
+"OTHER",
+"X",
+"",
+"Associated file reference (e.g. test result sheets)"
+]
+],
+"desc": "In Situ Vane Tests",
+"parent": "LOCA"
+}
+}
+}

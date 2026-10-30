@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>Draw cross section</title>
+  <path d="M2 8 C8 6 12 9 18 7 S27 6 30 8 V13 C24 12 20 15 14 13 S5 12 2 14 Z" fill="#E6C27A" stroke="#6D4C41" stroke-width="0.6"/>
+  <path d="M2 14 C5 12 9 14 14 13 S24 12 30 13 V20 C25 19 20 22 13 20 S5 20 2 21 Z" fill="#8D6E63" stroke="#4E342E" stroke-width="0.6"/>
+  <path d="M2 21 C6 20 9 21 13 20 S25 19 30 20 V29 H2 Z" fill="#90A4AE" stroke="#455A64" stroke-width="0.6"/>
+  <line x1="10" y1="4" x2="10" y2="26" stroke="#0D47A1" stroke-width="1.6"/>
+  <line x1="22" y1="4" x2="22" y2="24" stroke="#0D47A1" stroke-width="1.6"/>
+  <text x="3" y="5.5" font-family="Arial, Helvetica, sans-serif" font-size="5.5" font-weight="bold" fill="#C62828">A</text>
+  <text x="26" y="5.5" font-family="Arial, Helvetica, sans-serif" font-size="5.5" font-weight="bold" fill="#C62828">A'</text>
+</svg>
