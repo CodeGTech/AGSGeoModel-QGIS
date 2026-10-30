@@ -17,22 +17,68 @@ jobs:
       image: ghcr.io/qgis/pyqgis4-checker:main-ubuntu
 
     steps:
-      - name: Get the plugin files
+      - name: Download repository files
         uses: actions/checkout@v6
 
-      - name: Run the checker
+      - name: Show files downloaded by GitHub
         shell: bash
         run: |
-          pyqt5_to_pyqt6.py --dry_run --logfile pyqgis4-checker.log .
+          echo "Current folder:"
+          pwd
 
-      - name: Show the report
+          echo "Files and folders:"
+          find . -maxdepth 4 -type f | sort
+
+      - name: Find the QGIS plugin folder
+        id: find_plugin
+        shell: bash
+        run: |
+          echo "Looking for metadata.txt..."
+
+          METADATA_FILE=$(find . -type f -name "metadata.txt" | head -n 1)
+
+          if [ -z "$METADATA_FILE" ]; then
+            echo "ERROR: No metadata.txt file was found."
+            echo "The workflow may be on the wrong branch or the plugin files may be in another repository."
+            exit 1
+          fi
+
+          PLUGIN_FOLDER=$(dirname "$METADATA_FILE")
+
+          echo "Found metadata file:"
+          echo "$METADATA_FILE"
+
+          echo "Plugin folder selected for checking:"
+          echo "$PLUGIN_FOLDER"
+
+          echo "plugin_folder=$PLUGIN_FOLDER" >> "$GITHUB_OUTPUT"
+
+      - name: Run the PyQGIS 4 checker
+        shell: bash
+        run: |
+          echo "Scanning this plugin folder:"
+          echo "${{ steps.find_plugin.outputs.plugin_folder }}"
+
+          pyqt5_to_pyqt6.py \
+            --dry_run \
+            --logfile pyqgis4-checker.log \
+            "${{ steps.find_plugin.outputs.plugin_folder }}"
+
+      - name: Show the checker report
         if: always()
         shell: bash
         run: |
-          if [ -f pyqgis4-checker.log ]; then
+          echo "PyQGIS 4 checker report"
+          echo "=========================="
+
+          if [ -s pyqgis4-checker.log ]; then
             cat pyqgis4-checker.log
+          elif [ -f pyqgis4-checker.log ]; then
+            echo "The report was created, but it is empty."
+            echo "This may mean that no compatibility problems were detected."
           else
             echo "No report file was created."
+            echo "Open the earlier workflow steps to look for an error."
           fi
 
       - name: Make the report downloadable
