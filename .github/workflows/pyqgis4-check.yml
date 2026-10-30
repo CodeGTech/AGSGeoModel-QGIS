@@ -1,0 +1,45 @@
+name: PyQGIS 4 compatibility check
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  pyqgis4-check:
+    name: Check QGIS 4 compatibility
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: read
+
+    container:
+      image: ghcr.io/qgis/pyqgis4-checker:main-ubuntu
+
+    steps:
+      - name: Get the plugin files
+        uses: actions/checkout@v6
+
+      - name: Run the checker
+        shell: bash
+        run: |
+          pyqt5_to_pyqt6.py --dry_run --logfile pyqgis4-checker.log .
+
+      - name: Show the report
+        if: always()
+        shell: bash
+        run: |
+          if [ -f pyqgis4-checker.log ]; then
+            cat pyqgis4-checker.log
+          else
+            echo "No report file was created."
+          fi
+
+      - name: Make the report downloadable
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pyqgis4-checker-report
+          path: pyqgis4-checker.log
+          if-no-files-found: warn
+          retention-days: 14
