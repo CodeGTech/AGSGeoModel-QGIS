@@ -1,91 +1,83 @@
 name: PyQGIS 4 compatibility check
-
+ 
 on:
-  push:
-  workflow_dispatch:
-
+push:
+workflow_dispatch:
+ 
 jobs:
-  pyqgis4-check:
-    name: Check QGIS 4 compatibility
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: read
-
-    container:
-      image: ghcr.io/qgis/pyqgis4-checker:main-ubuntu
-
-    steps:
-      - name: Download repository files
-        uses: actions/checkout@v6
-
-      - name: Show files downloaded by GitHub
-        shell: bash
-        run: |
-          echo "Current folder:"
-          pwd
-
-          echo "Files and folders:"
-          find . -maxdepth 4 -type f | sort
-
-      - name: Find the QGIS plugin folder
-        id: find_plugin
-        shell: bash
-        run: |
-          echo "Looking for metadata.txt..."
-
-          METADATA_FILE=$(find . -type f -name "metadata.txt" | head -n 1)
-
-          if [ -z "$METADATA_FILE" ]; then
-            echo "ERROR: No metadata.txt file was found."
-            echo "The workflow may be on the wrong branch or the plugin files may be in another repository."
-            exit 1
-          fi
-
-          PLUGIN_FOLDER=$(dirname "$METADATA_FILE")
-
-          echo "Found metadata file:"
-          echo "$METADATA_FILE"
-
-          echo "Plugin folder selected for checking:"
-          echo "$PLUGIN_FOLDER"
-
-          echo "plugin_folder=$PLUGIN_FOLDER" >> "$GITHUB_OUTPUT"
-
-      - name: Run the PyQGIS 4 checker
-        shell: bash
-        run: |
-          echo "Scanning this plugin folder:"
-          echo "${{ steps.find_plugin.outputs.plugin_folder }}"
-
-          pyqt5_to_pyqt6.py \
-            --dry_run \
-            --logfile pyqgis4-checker.log \
-            "${{ steps.find_plugin.outputs.plugin_folder }}"
-
-      - name: Show the checker report
-        if: always()
-        shell: bash
-        run: |
-          echo "PyQGIS 4 checker report"
-          echo "=========================="
-
-          if [ -s pyqgis4-checker.log ]; then
-            cat pyqgis4-checker.log
-          elif [ -f pyqgis4-checker.log ]; then
-            echo "The report was created, but it is empty."
-            echo "This may mean that no compatibility problems were detected."
-          else
-            echo "No report file was created."
-            echo "Open the earlier workflow steps to look for an error."
-          fi
-
-      - name: Make the report downloadable
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: pyqgis4-checker-report
-          path: pyqgis4-checker.log
-          if-no-files-found: warn
-          retention-days: 14
+pyqgis4-check:
+name: Check agsgeomodel for QGIS 4 compatibility
+runs-on: ubuntu-latest
+ 
+permissions:
+contents: read
+packages: read
+ 
+container:
+image: ghcr.io/qgis/pyqgis4-checker:main-ubuntu
+ 
+steps:
+- name: Download repository files
+uses: actions/checkout@v6
+ 
+- name: Confirm the correct plugin folder
+shell: bash
+run: |
+echo "Current repository location:"
+pwd
+ 
+echo "Checking for the agsgeomodel folder..."
+ 
+if [ ! -d "./agsgeomodel" ]; then
+echo "ERROR: The folder ./agsgeomodel was not found."
+exit 1
+fi
+ 
+if [ ! -f "./agsgeomodel/metadata.txt" ]; then
+echo "ERROR: The folder exists, but metadata.txt was not found."
+exit 1
+fi
+ 
+echo "SUCCESS: The correct plugin folder was found."
+echo "Plugin metadata:"
+echo "./agsgeomodel/metadata.txt"
+ 
+echo "Python files that will be checked:"
+find ./agsgeomodel -type f -name "*.py" | sort
+ 
+- name: Run checker on agsgeomodel
+shell: bash
+run: |
+echo "The checker is scanning:"
+echo "./agsgeomodel"
+ 
+pyqt5_to_pyqt6.py \
+--dry_run \
+--logfile pyqgis4-checker.log \
+./agsgeomodel
+ 
+- name: Show checker report
+if: always()
+shell: bash
+run: |
+echo "PyQGIS 4 checker report"
+echo "========================"
+ 
+if [ -s pyqgis4-checker.log ]; then
+cat pyqgis4-checker.log
+elif [ -f pyqgis4-checker.log ]; then
+echo "The report was created but is empty."
+echo "This may mean no compatibility issues were found."
+else
+echo "No report was created."
+echo "Open the previous workflow steps to see the error."
+fi
+ 
+- name: Make report downloadable
+if: always()
+uses: actions/upload-artifact@v7
+with:
+name: pyqgis4-checker-report
+path: pyqgis4-checker.log
+if-no-files-found: warn
+retention-days: 14
